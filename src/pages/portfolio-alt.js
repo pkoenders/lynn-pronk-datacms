@@ -135,7 +135,7 @@ const BlogPage = props => {
               url
               alt
               
-              fluid(maxWidth: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
+              fluid(maxWidth: 515, imgixParams: { fm: "jpg", auto: "compress" }) {
                 ...GatsbyDatoCmsFluid
             }
             
