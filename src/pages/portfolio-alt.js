@@ -201,7 +201,10 @@ const BlogPage = props => {
                   </Img>
 
                   <Link to={`/portfolio/${edge.node.slug}`} className={'item-content'}  >
-                    <h2>{edge.node.title} <RightArrow /></h2>
+                    <h2>
+                      {edge.node.title}
+                      <RightArrow />
+                    </h2>
                   </Link>
                 </div>
               </li>

@@ -31,7 +31,7 @@ const Header = () => {
   return (
 
     <>
-      <button className="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+      <button className="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
