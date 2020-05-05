@@ -43,11 +43,11 @@ const BlogPage = props => {
 
 
   const clickListener = () => console.log('document clicked');
-  // Attach a click listener on the document.
-  document.addEventListener('click', clickListener);
+  // // Attach a click listener on the document.
+  // document.addEventListener('click', clickListener);
 
-  // Detach the click listener on the document.
-  document.removeEventListener('click', clickListener);
+  // // Detach the click listener on the document.
+  // document.removeEventListener('click', clickListener);
 
 
   //const btn = document.querySelector('closeReactLightbox')
