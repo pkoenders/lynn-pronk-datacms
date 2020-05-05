@@ -40,7 +40,7 @@ const Header = () => {
 
       <header id="myHeader" className={headerStyles.header + ' ' + headerStyles.aside}>
         <div>
-          <Link to="/" >
+          <Link to="/" title="Home" >
             <div className={headerStyles.avatar}>
               <Img
                 alt={'Lynn Pronk'}
@@ -51,7 +51,7 @@ const Header = () => {
           </Link>
 
 
-          <Link to="/" >
+          <Link to="/" title="Home"  >
             <div className={headerStyles.avatar + ' ' + headerStyles.avatarMobile}>
               <Img
                 alt={'Lynn Pronk'}
