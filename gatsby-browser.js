@@ -190,10 +190,9 @@ export const onRouteUpdate = (_, pluginOptions) => {
         })
     });
 
-    // Resize
-    window.addEventListener('resize', (_, pluginOptions) => {
-        mobileNav()
-
+    //Resize
+    window.addEventListener('resize', () => {
+        mobileNavOnResize()
     })
 
 }
@@ -223,22 +222,46 @@ function initStickyHeader() {
 }
 
 
-function toggleMobileNav(hamBurgerBtn, headerDiv, layoutModule) {
-    hamBurgerBtn.addEventListener("click", function (evt) {
-        //console.log('Hamburger Clicked')
+function toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule) {
+    hamBurgerBtn.addEventListener("click", function () {
+        console.log('Hamburger Clicked')
         if (headerDiv.offsetHeight <= 50) {
             headerDiv.style.height = `auto`;
             headerDiv.style.maxHeight = 100 + `%`
             headerDiv.classList.add("headerOpen")
             hamBurgerBtn.classList.add("is-active")
+            //console.log('Hamburger Clicked 2')
+
         } else {
             headerDiv.style.maxHeight = 50 + `px`
             headerDiv.style.height = 50 + `px`
             headerDiv.classList.remove("headerOpen")
             hamBurgerBtn.classList.remove("is-active")
         }
-    })
+    });
 
+    [headerDiv, layoutModule].forEach(function (element) {
+        element.addEventListener("click", function () {
+            console.log('headerDiv, layoutModule Clicked')
+            if (headerDiv.classList.contains('headerOpen')) {
+                headerDiv.style.maxHeight = 50 + `px`
+                headerDiv.style.height = 50 + `px`
+                headerDiv.classList.remove("headerOpen")
+                hamBurgerBtn.classList.remove("is-active")
+            }
+        })
+    })
+}
+
+function mobileNav() {
+    const hamBurgerBtn = document.querySelector('.hamburger')
+    const headerDiv = document.getElementById("myHeader")
+    const layoutModule = document.getElementById("layoutModule")
+    toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule)
+}
+
+
+function toggleMobileNavOnResize(headerDiv, hamBurgerBtn) {
     if (window.innerWidth >= 768) {
         //console.log('Widow is > 576px')
         headerDiv.style.height = `auto`
@@ -255,26 +278,12 @@ function toggleMobileNav(hamBurgerBtn, headerDiv, layoutModule) {
         headerDiv.style.height = `auto`
         headerDiv.style.maxHeight = 100 + `% `
         hamBurgerBtn.classList.add("is-active")
-
     }
-
-    [headerDiv, layoutModule].forEach(function (element) {
-        element.addEventListener("click", function () {
-            if (headerDiv.classList.contains('headerOpen')) {
-                headerDiv.style.maxHeight = 50 + `px`
-                headerDiv.style.height = 50 + `px`
-                headerDiv.classList.remove("headerOpen")
-                hamBurgerBtn.classList.remove("is-active")
-            }
-        });
-    })
 }
-
-function mobileNav() {
-    const hamBurgerBtn = document.querySelector('.hamburger')
+function mobileNavOnResize() {
     const headerDiv = document.getElementById("myHeader")
-    const layoutModule = document.getElementById("layoutModule")
-    toggleMobileNav(hamBurgerBtn, headerDiv, layoutModule)
+    const hamBurgerBtn = document.querySelector('.hamburger')
+    toggleMobileNavOnResize(headerDiv, hamBurgerBtn)
 }
 
 
@@ -330,6 +339,7 @@ const resizeGridItem = (item) => {
 // Fancy hover the grid
 const hoverGridItem = (hoverItem) => {
     hoverItem.addEventListener("mouseover", function (evt) {
+        //console.log('hover gallery item')
         var spin = 0
         var precision = 1000
         //spin = Math.floor(Math.random() * (4.00)),
