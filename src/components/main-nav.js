@@ -7,15 +7,7 @@ import mainNavStyles from "./main-nav.module.scss"
 
 const MainNav = ({ location }) => {
 
-
-
   const link = globalHistory.location.pathname
-
-
-
-  //const link = window.location.pathname;
-  //console.log("link = " + link)
-
   const isPartiallyActive = ({
     isPartiallyCurrent
   }) => {
@@ -24,78 +16,17 @@ const MainNav = ({ location }) => {
       : {}
   }
 
-
-
-
-
   return (
-
-
     <nav id="myTopnav">
-
-      {/* <Location>
-        {({ location }) => {
-          console.log(location)
-          // return <p>The location is {location.pathname}</p>
-          const link = location.pathname;
-          console.log("link = " + link)
-        }}
-      </Location> */}
-
-
-
-
       <ul className={mainNavStyles.navList}>
         <li>
           <Link
-            className={link.includes("/portfolio/") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
+            className={link.includes("/gallery/") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
             activeClassName={mainNavStyles.activeNavItem}
             //getProps={isPartiallyActive}
             to="/"
           >
-            My portfolio
-          </Link>
-        </li>
-
-
-        <li>
-          <Link
-            className={link.includes("/portfolio/") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
-            activeClassName={mainNavStyles.activeNavItem}
-            //getProps={isPartiallyActive}
-            to="/portfolio-alt-layout"
-          >
-            My portfolio alt layout
-          </Link>
-        </li>
-
-
-
-
-
-        <li>
-          <Link
-            className={'closeReactLightbox' + ' ' + mainNavStyles.navItem}
-            activeClassName={mainNavStyles.activeNavItem}
-
-            // onClick={handleClose(true)}
-            //onClick={this.closeReactLightbox}
-            //onCloseRequest={() => this.setState({ isOpen: false })}
-            to="/portfolio-alt"
-          >
-            My portfolio - Gallery
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            className={mainNavStyles.navItem + ' ' + 'SRLCloseButton'}
-            activeClassName={mainNavStyles.activeNavItem}
-            //onClick={closeLightbox}
-            //getProps={isPartiallyActive}
-            to="/portfolio-slb"
-          >
-            My portfolio - Simple Light Box
+            My gallery
           </Link>
         </li>
 

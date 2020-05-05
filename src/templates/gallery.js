@@ -1,5 +1,4 @@
 import React from 'react'
-import IndexBGroundImg from '../components/contact-bground-img'
 import { Link, graphql } from 'gatsby'
 import blogStyles from '../pages/portfolio.module.scss'
 import Layout from '../components/layout'
@@ -41,25 +40,15 @@ const PortfolioPage = ({ data, pageContext }) => {
 
 
     < div >
-      <IndexBGroundImg />
       <Header />
       <Layout >
-
         <Head title={data.datoCmsPortfolio.title} />
         <div className={blogStyles.portfolioPageWrapper}>
           <h2>{data.datoCmsPortfolio.title}</h2>
-          <div className={blogStyles.portfolioPage}>
-            <Img className={blogStyles.coverImage + ' ' + 'mediumZoomImage'}
-              fluid={data.datoCmsPortfolio.coverImage.fluid}
-              alt={data.datoCmsPortfolio.coverImage.alt}
-              src={data.datoCmsPortfolio.coverImage.url}
-            />
-            <div dangerouslySetInnerHTML={{ __html: data.datoCmsPortfolio.description }} />
-          </div>
 
-          <div className={blogStyles.navPortfolio}>
+          <div className={blogStyles.portfolioNav}>
             {previous &&
-              <Link to={'portfolio/' + previous.slug} className={blogStyles.previous}>
+              <Link to={'gallery/' + previous.slug} className={blogStyles.previous}>
                 <div>
                   <img
                     alt={previous.coverImage.alt}
@@ -71,7 +60,7 @@ const PortfolioPage = ({ data, pageContext }) => {
             }
 
             {next &&
-              <Link to={'portfolio/' + next.slug} className={blogStyles.next}>
+              <Link to={'gallery/' + next.slug} className={blogStyles.next}>
                 <div>
                   <img
                     alt={next.coverImage.alt}
@@ -81,6 +70,20 @@ const PortfolioPage = ({ data, pageContext }) => {
                 <span>Next</span>
               </Link>
             }
+          </div>
+
+
+          <div className={blogStyles.portfolioContent}>
+            <div dangerouslySetInnerHTML={{ __html: data.datoCmsPortfolio.description }} />
+          </div>
+
+
+          <div className={blogStyles.portfolioPage}>
+            <Img className={blogStyles.coverImage + ' ' + 'mediumZoomImage'}
+              fluid={data.datoCmsPortfolio.coverImage.fluid}
+              alt={data.datoCmsPortfolio.coverImage.alt}
+              src={data.datoCmsPortfolio.coverImage.url}
+            />
 
             <div className={blogStyles.itemSizing}>
               <DimensionsIcon />
@@ -89,8 +92,8 @@ const PortfolioPage = ({ data, pageContext }) => {
                 <p><span>H</span><span>{data.datoCmsPortfolio.artworkHeight + " cm"}</span></p>
               </div>
             </div>
-          </div>
 
+          </div>
         </div >
       </Layout >
     </div >

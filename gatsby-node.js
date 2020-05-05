@@ -51,11 +51,8 @@ exports.createPages = ({ graphql, actions }) => {
 
         createPage({
           thisPortfolioItem,
-          path: `/portfolio/${portfolioItem.node.slug}`,
-          //component: path.resolve(`./src/templates/portfolio.js`),
-
-          component: path.resolve(`./src/templates/portfolio-alt.js`),
-
+          path: `/gallery/${portfolioItem.node.slug}`,
+          component: path.resolve(`./src/templates/gallery.js`),
           context: {
             slug: portfolioItem.node.slug,
             pathItem: thisPortfolioItem,

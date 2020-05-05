@@ -116,6 +116,7 @@ body {
 
   //background: #dad8d8 !important;
   background: #081727 !important;
+  top: 50px !important;
 
   .ril__inner {
     //display: flex;
@@ -132,6 +133,7 @@ body {
   .ril__imageNext,
   .ril__imagePrev {
     width: max-content;
+    width: 0;
     img {
       height: 100vh;
       width: auto;
@@ -139,16 +141,25 @@ body {
   }
   .ril-image-current {
     position: absolute;
+    display: inline-grid;
     overflow-x: scroll;
     margin: auto;
-    width: max-content;
-    overflow-y: hidden;
+    width: fit-content;
+    height: fit-content;
+    //height: auto;
     a {
-      display: flex;
-      height: 100vh;
+      //display: flex;
+      align-self: center;
+      max-height: 100%;
+      max-height: 100vh;
       img {
-        height: 100vh;
-        width: auto;
+        max-width: 100%;
+        max-height: 100vh;
+        //max-width: max-content;
+        //width: auto;
+        //min-width: 100%;
+        //height: auto;
+        //max-height: 100vh;
       }
     }
   }

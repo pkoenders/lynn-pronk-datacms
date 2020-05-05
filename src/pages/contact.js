@@ -1,5 +1,4 @@
 import React from 'react';
-import ContactBGroundImg from '../components/contact-bground-img'
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Header from "../components/header"

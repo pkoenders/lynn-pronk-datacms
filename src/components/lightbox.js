@@ -27,7 +27,7 @@ const Lightbox = ({
         array.push(
             <>
                 {/* <h2>{image.node.title}</h2> */}
-                <Link to={`/portfolio/${image.node.slug}`}  >
+                <Link to={`/gallery/${image.node.slug}`}  >
                     <img src={image.node.coverImage.url} />
                 </Link>
             </>
