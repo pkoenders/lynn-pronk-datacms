@@ -169,7 +169,7 @@ export const onRouteUpdate = (_, pluginOptions) => {
     })
 
     const options = { ...defaultOptions, ...pluginOptions }
-    console.log('ZoomOptions 1 = ' + options)
+    //console.log('ZoomOptions 1 = ' + options)
     injectStyles(options)
     onFCP(() => applyZoomEffect(options))
     applyZoomEffect(options)
@@ -224,7 +224,7 @@ function initStickyHeader() {
 
 function toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule) {
     hamBurgerBtn.addEventListener("click", function () {
-        console.log('Hamburger Clicked')
+        //console.log('Hamburger Clicked')
         if (headerDiv.offsetHeight <= 50) {
             headerDiv.style.height = `auto`;
             headerDiv.style.maxHeight = 100 + `%`

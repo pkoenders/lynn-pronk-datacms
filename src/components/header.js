@@ -19,7 +19,7 @@ const Header = () => {
 
       file(relativePath: { eq: "img/lynn-avatar.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 175, maxHeight: 175) {
+          fluid(maxWidth: 123, maxHeight: 123, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
