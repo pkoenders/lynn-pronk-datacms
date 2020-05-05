@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import blogStyles from '../pages/portfolio.module.scss'
 import Layout from '../components/layout'
 import Head from '../components/head'
@@ -37,9 +38,17 @@ const PortfolioPage = ({ data, pageContext }) => {
   const { next, previous } = pageContext
 
   return (
-
-
     < div >
+      <Helmet
+        title="Lynn Pronk Portfolio"
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
+      >
+        <html lang="en" />
+        <link rel="preconnect" href="https://lynn-pronk-datocms.netlify.app/"></link>
+      </Helmet>
       <Header />
       <Layout >
         <Head title={data.datoCmsPortfolio.title} />

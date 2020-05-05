@@ -67,7 +67,7 @@ const BlogPage = props => {
 
     <div>
       <Helmet
-        title="Gatsby Default Starter"
+        title="Lynn Pronk Portfolio"
         meta={[
           { rel: 'preconnect', href: 'https://lynn-pronk-datocms.netlify.app/' },
           { name: 'description', content: 'Sample' },
@@ -75,6 +75,7 @@ const BlogPage = props => {
         ]}
       >
         <html lang="en" />
+        <link rel="preconnect" href="https://lynn-pronk-datocms.netlify.app/"></link>
       </Helmet>
       <Head title="Home" />
       {/* <IndexBGroundImg /> */}
