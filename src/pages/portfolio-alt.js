@@ -154,6 +154,7 @@ const BlogPage = props => {
       <Helmet
         title="Gatsby Default Starter"
         meta={[
+          { rel: 'preconnect', href: 'https://lynn-pronk-datocms.netlify.app/' },
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
         ]}
