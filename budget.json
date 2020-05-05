@@ -1,0 +1,64 @@
+"performance-budget": {
+  "id": "performance-budget",
+  "title": "Performance budget",
+  "description": "Keep the quantity and size of network requests under the targets set by the provided performance budget. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/budgets).",
+  "score": null,
+  "scoreDisplayMode": "informative",
+  "details": {
+    "type": "table",
+    "headings": [
+      {
+        "key": "label",
+        "itemType": "text",
+        "text": "Resource Type"
+      },
+      {
+        "key": "requestCount",
+        "itemType": "numeric",
+        "text": "Requests"
+      },
+      {
+        "key": "size",
+        "itemType": "bytes",
+        "text": "Transfer Size"
+      },
+      {
+        "key": "countOverBudget",
+        "itemType": "text",
+        "text": ""
+      },
+      {
+        "key": "sizeOverBudget",
+        "itemType": "bytes",
+        "text": "Over Budget"
+      }
+    ],
+    "items": [
+      {
+        "resourceType": "image",
+        "label": "Image",
+        "requestCount": 20,
+        "size": 172522
+      },
+      {
+        "resourceType": "script",
+        "label": "Script",
+        "requestCount": 10,
+        "size": 446616
+      },
+      {
+        "resourceType": "total",
+        "label": "Total",
+        "requestCount": 45,
+        "size": 755199
+      },
+      {
+        "resourceType": "third-party",
+        "label": "Third-party",
+        "requestCount": 15,
+        "size": 207011,
+        "countOverBudget": "3 requests"
+      }
+    ]
+  }
+},
