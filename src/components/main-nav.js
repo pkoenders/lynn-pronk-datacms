@@ -1,13 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import { globalHistory } from '@reach/router'
 import "./main-nav-sticky.scss"
 import mainNavStyles from "./main-nav.module.scss"
 
 
-const MainNav = () => {
+const MainNav = ({ location }) => {
 
-  const link = window.location.pathname;
-  console.log("link = " + link)
+
+
+  const link = globalHistory.location.pathname
+
+
+
+  //const link = window.location.pathname;
+  //console.log("link = " + link)
 
   const isPartiallyActive = ({
     isPartiallyCurrent
@@ -22,7 +29,21 @@ const MainNav = () => {
 
 
   return (
+
+
     <nav id="myTopnav">
+
+      {/* <Location>
+        {({ location }) => {
+          console.log(location)
+          // return <p>The location is {location.pathname}</p>
+          const link = location.pathname;
+          console.log("link = " + link)
+        }}
+      </Location> */}
+
+
+
 
       <ul className={mainNavStyles.navList}>
         <li>
