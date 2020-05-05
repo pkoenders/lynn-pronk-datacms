@@ -7,7 +7,7 @@
       { "resourceType": "stylesheet", "budget": 15 },
       { "resourceType": "media", "budget": 46 },
       { "resourceType": "font", "budget": 24 },
-      { "resourceType": "total", "budget": 800 }
+      { "resourceType": "total", "budget": 900 }
     ],
     "timings": [
       { "metric": "interactive", "budget": 5000 },
