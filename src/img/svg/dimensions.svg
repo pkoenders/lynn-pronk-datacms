@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>dimensions</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dimensions" fill="#738496" fill-rule="nonzero">
+            <g id="Group">
+                <rect id="Rectangle" x="80.7692308" y="50" width="7.69230769" height="7.69230769"></rect>
+                <rect id="Rectangle" x="80.7692308" y="65.3846154" width="7.69230769" height="7.69230769"></rect>
+                <rect id="Rectangle" x="80.7692308" y="80.7692308" width="7.69230769" height="7.69230769"></rect>
+                <rect id="Rectangle" x="65.3846154" y="80.7692308" width="7.69230769" height="7.69230769"></rect>
+                <rect id="Rectangle" x="50" y="80.7692308" width="7.69230769" height="7.69230769"></rect>
+                <polygon id="Path" points="23.0769231 23.0769231 80.7692308 23.0769231 80.7692308 34.6153846 100 17.3076923 80.7692308 0 80.7692308 11.5384615 11.5384615 11.5384615 11.5384615 80.7692308 0 80.7692308 17.3076923 100 34.6153846 80.7692308 23.0769231 80.7692308"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

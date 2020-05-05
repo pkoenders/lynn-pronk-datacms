@@ -1,0 +1,39 @@
+@import "../styles/media-queries";
+@import "./hamburgers/hamburgers";
+
+.hamburger {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  padding: 13px 15px;
+  z-index: 10000;
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 40px;
+    height: 2px;
+    background-color: #bfbfbf;
+  }
+
+  .hamburger-label {
+    color: #bfbfbf;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.hamburger.is-active {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: #bfbfbf;
+  }
+}
+
+@include respond-below(sm) {
+  .hamburger {
+    display: block;
+  }
+}

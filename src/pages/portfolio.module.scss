@@ -1,0 +1,236 @@
+@import "../styles/media-queries"; //
+
+.grid {
+}
+
+.filterPosts {
+  margin: 30px 0 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    margin: 0 15px 0 0;
+  }
+}
+
+.item {
+  //width: auto;
+  background-color: #ffffff;
+  //margin: 0 0 15px 0;
+}
+
+.posts {
+  display: grid;
+  padding: 15px;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 1px;
+
+  list-style-type: none;
+  margin: 0 auto;
+
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+}
+
+.post {
+  height: fit-content;
+  background-color: #f5f5f5;
+  //border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  z-index: 5;
+
+  a {
+    display: block;
+    //position: absolute;
+    text-decoration: none;
+    //overflow: hidden;
+    img {
+      //filter: blur(1px);
+
+      //display: flex;
+    }
+  }
+  a:hover {
+    img {
+      //opacity: 0.5;
+    }
+  }
+
+  h2 {
+    color: #5b5b5b;
+    line-height: 1;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    svg {
+      // right: 5px;
+
+      height: 24px;
+      width: auto;
+      margin: -3px 0;
+    }
+  }
+  p {
+    color: #777777;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}
+.post:hover {
+  box-shadow: 0 0 13px 5px rgba(0, 0, 0, 0.173);
+  transform: scale(1.05) rotate(2deg);
+  cursor: pointer;
+  //border: 1px solid #c7419c;
+  //border: 1px solid #ffffff;
+  a {
+    img {
+      //filter: blur(0px);
+    }
+  }
+}
+.post:before {
+  // content: '';
+  // height: 100%;
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  // z-index: 1;
+  // position: absolute;
+  // background-color: rgba(0, 0, 0, 0.33);
+  // transition: all 0.1s ease-in-out;
+}
+
+.post:hover:before {
+  //overflow: visible;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.portfolioPageWrapper {
+  display: block;
+  max-width: 800px;
+  margin: 15px auto 0 auto;
+  h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    color: #eff0f1;
+  }
+
+  .portfolioPage {
+    padding: 60px 60px 1px;
+    //border-radius: 2px;
+    background-color: #ffffff;
+    @include respond-below(sm) {
+      padding: 30px 30px 1px;
+    }
+    @include respond-below(xs) {
+      padding: 15px 15px 1px;
+    }
+
+    .coverImage,
+    .coverImage:active,
+    .coverImage:focus {
+      img {
+        max-width: 800px !important;
+        outline-width: 0 !important;
+      }
+    }
+  }
+
+  .portfolioContent,
+  .portfolioNav {
+    display: flex;
+    padding: 0;
+
+    //border-top: 1px solid #bfb9b9;
+    //border-bottom: 1px solid #bfb9b9;
+    //background-color: #ffffffc9;
+
+    margin: 0px 15px 10px;
+    position: relative;
+    height: 40px;
+
+    .previous,
+    .next {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: #eff0f1;
+      position: absolute;
+      left: 0px;
+      //margin-left: 15px;
+      justify-self: flex-start;
+      display: flex;
+      align-items: center;
+      width: auto;
+
+      div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid #738496;
+        overflow: hidden;
+        position: relative;
+        img {
+          position: absolute;
+          //height: 50px;
+          width: 80px;
+          max-width: 80px;
+          margin: -50%;
+        }
+      }
+      span {
+        margin: 0 0 0 10px;
+      }
+    }
+
+    .next {
+      //margin: 0 0 0 auto;
+      //margin-right: 15px;
+      right: 0px;
+      left: auto;
+
+      flex-direction: row-reverse;
+      span {
+        margin: 0 10px 0;
+      }
+    }
+  }
+  .portfolioContent {
+    border: none;
+    padding: 15px 30px;
+    margin: 0;
+    height: auto;
+    background-color: #e1e8f1;
+    p {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .itemSizing {
+    display: flex;
+    width: fit-content;
+    margin: 30px auto;
+    svg {
+      width: 25px;
+      height: 25px;
+      margin: 1px 10px 1px 0;
+    }
+    p {
+      font-size: 0.7rem;
+      line-height: 0.8rem;
+      margin-bottom: 0px;
+      color: #738496;
+      span {
+        width: 20px;
+        display: inline-flex;
+      }
+      span + span {
+        width: auto;
+        font-weight: bold;
+      }
+    }
+  }
+}

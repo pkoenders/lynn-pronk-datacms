@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="26px" viewBox="0 0 31 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Group-2" transform="translate(1.000000, 1.000000)" stroke="#C7419A" stroke-width="2">
+            <path d="M0.405314624,12 L28.4285714,12" id="Line"></path>
+            <path d="M16.973545,0.19047619 L28.4550265,12" id="Line"></path>
+            <path d="M16.973545,12 L28.4550265,23.8095238" id="Line" transform="translate(22.714286, 17.904762) scale(1, -1) translate(-22.714286, -17.904762) "></path>
+        </g>
+    </g>
+</svg>

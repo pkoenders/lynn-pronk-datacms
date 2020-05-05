@@ -1,0 +1,31 @@
+@import "../styles/media-queries"; //
+
+body.blog {
+  background: #dbdbdb;
+  background: #253240;
+}
+.container {
+  margin: 0;
+  //max-width: 750px;
+  //padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 300px;
+
+  @include respond-below(sm) {
+    margin-left: 0px;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  main {
+    // max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    //padding: 15px;
+  }
+}
