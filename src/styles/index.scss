@@ -446,7 +446,9 @@ button:hover.buttonPrimary {
 }
 
 button.buttonSecondary,
-.buttonSecondary {
+.buttonSecondary,
+button.buttonSecondary:focus,
+.buttonSecondary:focus {
   padding: 0.5em 1.2em;
   border: 1px solid #3d5269;
   background-color: #283746;
