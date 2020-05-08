@@ -4,17 +4,19 @@
 }
 
 .filterPosts {
-  margin: 30px 15px 0px 15px;
+  margin: 30px 15px 15px 15px;
   display: block;
 
   text-align: center;
   button {
-    margin: 0 15px 15px 0;
+    // margin: 0 15px 15px 0;
+    margin: 0 0.04rem;
+    width: min-content;
   }
 }
 
 .item {
-  background-color: #ffffff;
+  opacity: 0 !important;
 }
 
 .posts {
@@ -33,6 +35,18 @@
   z-index: 5;
   border-radius: 3px;
   overflow: hidden;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.5;
+    svg {
+      height: 30px;
+      width: 35px;
+    }
+  }
 
   a {
     display: block;
@@ -41,7 +55,7 @@
 
   h2 {
     color: #464141;
-    background-color: #e1e8f1;
+    background-color: #efefef;
     line-height: 1;
     margin: 0;
     padding: 0.7rem 0.8rem;
@@ -50,9 +64,11 @@
     border-top: 1px solid #75879a;
     justify-content: space-between;
     svg {
-      height: 24px;
+      position: relative;
+      height: 30px;
+
       width: auto;
-      margin: -3px 0;
+      margin: -6px 0;
     }
   }
   p {
@@ -61,6 +77,7 @@
     font-style: italic;
   }
 }
+
 .post:hover {
   box-shadow: 0 0 13px 5px rgba(0, 0, 0, 0.173);
   transform: scale(1.05) rotate(2deg);

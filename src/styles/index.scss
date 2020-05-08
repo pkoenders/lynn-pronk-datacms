@@ -448,15 +448,21 @@ button:hover.buttonPrimary {
 button.buttonSecondary,
 .buttonSecondary {
   padding: 0.5em 1.2em;
-  border: 1px solid #8fa1b3;
+  border: 1px solid #3d5269;
   background-color: #283746;
 }
 
-button.buttonSecondary.active,
-.buttonSecondary.active {
-  border: 1px solid #1e2833;
+button.buttonSecondary.isActive,
+.buttonSecondary.isActive {
+  border: 1px solid transparent;
   background-color: #c7419a;
 }
+button.buttonSecondary:hover,
+.buttonSecondary:hover {
+  border: 1px solid #c7419a;
+  //background-color: transparent;
+}
+
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;

@@ -1,11 +1,15 @@
+//import Layout from "./src/components/gallery"
+//import React, { Gallery } from "react"
+import Gallery from "./src/components/gallery"
+
 // mediumZoom
-import mediumZoom from 'medium-zoom'
+import mediumZoom from "medium-zoom"
 
 // @see https://github.com/francoischalifour/medium-zoom#options
 const defaultOptions = {
     //maxWidth: 800,
     margin: 0,
-    background: '#dad8d8',
+    background: "#dad8d8",
     scrollOffset: 40,
     // container: null,
     // template: null,
@@ -14,11 +18,11 @@ const defaultOptions = {
 }
 
 // @see https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-remark-images/src/constants.js#L1
-const imageClass = '.mediumZoomImage img'
+const imageClass = ".mediumZoomImage img"
 
-const FIRST_CONTENTFUL_PAINT = 'first-contentful-paint'
-const ZOOM_STYLE_ID = 'medium-zoom-styles'
-const TRANSITION_EFFECT = 'opacity 0.5s, transform .3s cubic-bezier(.2,0,.2,1)'
+const FIRST_CONTENTFUL_PAINT = "first-contentful-paint"
+const ZOOM_STYLE_ID = "medium-zoom-styles"
+const TRANSITION_EFFECT = "opacity 0.5s, transform .3s cubic-bezier(.2,0,.2,1)"
 
 function onFCP(callback) {
     if (!window.performance) {
@@ -28,13 +32,13 @@ function onFCP(callback) {
     const po = new PerformanceObserver(list =>
         list
             .getEntries()
-            .filter(({ entryType }) => entryType === 'paint')
+            .filter(({ entryType }) => entryType === "paint")
             .map(({ name }) => name === FIRST_CONTENTFUL_PAINT)
             .forEach(callback)
     )
 
     try {
-        po.observe({ entryTypes: ['measure', 'paint'] })
+        po.observe({ entryTypes: ["measure", "paint"] })
     } catch (e) {
         console.error(e)
         po.disconnect()
@@ -48,7 +52,7 @@ function injectStyles(options) {
     }
 
     const { zIndex } = options
-    const node = document.createElement('style')
+    const node = document.createElement("style")
     const styles = `
       .medium-zoom--opened > .medium-zoom-overlay,
       .medium-zoom--opened > .medium-zoom-image,
@@ -72,17 +76,17 @@ function applyZoomEffect({ excludedSelector, includedSelector, ...options }) {
         imageElements = imageElements.concat(includedEls)
     }
     const images = imageElements
-        .filter(el => !el.classList.contains('medium-zoom-image'))
+        .filter(el => !el.classList.contains("medium-zoom-image"))
         .map(el => {
             function onImageLoad() {
                 const originalTransition = el.style.transition
                 el.style.transition = `${originalTransition}, ${TRANSITION_EFFECT}`
-                el.removeEventListener('load', onImageLoad)
+                el.removeEventListener("load", onImageLoad)
             }
-            el.addEventListener('load', onImageLoad)
-            el.setAttribute('tabIndex', 0)
-            el.addEventListener('keydown', e => {
-                if (e.key === ' ' || e.key === 'Enter') {
+            el.addEventListener("load", onImageLoad)
+            el.setAttribute("tabIndex", 0)
+            el.addEventListener("keydown", e => {
+                if (e.key === " " || e.key === "Enter") {
                     e.preventDefault()
                     el.click()
                 }
@@ -102,9 +106,7 @@ function applyZoomEffect({ excludedSelector, includedSelector, ...options }) {
 //     applyZoomEffect(options)
 // }
 
-
 export const onRouteUpdate = (_, pluginOptions) => {
-
     // if (window.innerWidth >= 768) {
     //     mediumZoom('.mediumZoomImage img', {
     //         container: {
@@ -128,7 +130,6 @@ export const onRouteUpdate = (_, pluginOptions) => {
     //         },
     //     })
     // }
-
 
     // 'load scroll touchmove resize'.split(" ").forEach(function (e) {
     //     window.addEventListener(e, (_, pluginOptions) => {
@@ -156,7 +157,7 @@ export const onRouteUpdate = (_, pluginOptions) => {
     //     })
     // });
 
-    mediumZoom('.mediumZoomImage img', {
+    mediumZoom(".mediumZoomImage img", {
         container: {
             // width: 720,
             // height: 480,
@@ -165,7 +166,6 @@ export const onRouteUpdate = (_, pluginOptions) => {
             right: 0,
             left: 0,
         },
-
     })
 
     const options = { ...defaultOptions, ...pluginOptions }
@@ -174,92 +174,68 @@ export const onRouteUpdate = (_, pluginOptions) => {
     onFCP(() => applyZoomEffect(options))
     applyZoomEffect(options)
 
-
-
-
-
     // Load page
-    document.addEventListener("DOMContentLoaded", ready());
+    document.addEventListener("DOMContentLoaded", ready())
 
     // Scroll etc
-    'scroll touchmove resize'.split(" ").forEach(function (e) {
+    "scroll touchmove resize".split(" ").forEach(function (e) {
         window.addEventListener(e, () => {
             //initStickyHeader()
             resizeAllGridItems()
             //mobileNav()
         })
-    });
-
-    //Resize
-    window.addEventListener('resize', () => {
-        mobileNavOnResize()
     })
 
+    //Resize
+    window.addEventListener("resize", () => {
+        mobileNavOnResize()
+    })
 }
-
-
-
 
 function ready() {
     //alert('DOM is ready');
+
     resizeAllGridItems()
     hoverGridItems()
     mobileNav()
-    mobileFilterGallery()
-
-    // document.getElementsByClassName('ril-close')[0]
-    //     .addEventListener('click', function (e) {
-    //         handleClose(true);
-    //     });
-
-    //initStickyHeader()
+    filterGalleryBtns()
 }
-
-function initStickyHeader() {
-    var navBar = document.getElementById("myTopnav")
-    var sticky = document.querySelector("#myHeader > div").offsetHeight
-    setStickyNav(navBar, sticky)
-}
-
 
 function toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule) {
     hamBurgerBtn.addEventListener("click", function () {
         //console.log('Hamburger Clicked')
         if (headerDiv.offsetHeight <= 50) {
-            headerDiv.style.height = `auto`;
+            headerDiv.style.height = `auto`
             headerDiv.style.maxHeight = 100 + `%`
             headerDiv.classList.add("headerOpen")
             hamBurgerBtn.classList.add("is-active")
             //console.log('Hamburger Clicked 2')
-
         } else {
             headerDiv.style.maxHeight = 50 + `px`
             headerDiv.style.height = 50 + `px`
             headerDiv.classList.remove("headerOpen")
             hamBurgerBtn.classList.remove("is-active")
         }
-    });
-
-    [headerDiv, layoutModule].forEach(function (element) {
-        element.addEventListener("click", function () {
-            console.log('headerDiv, layoutModule Clicked')
-            if (headerDiv.classList.contains('headerOpen')) {
-                headerDiv.style.maxHeight = 50 + `px`
-                headerDiv.style.height = 50 + `px`
-                headerDiv.classList.remove("headerOpen")
-                hamBurgerBtn.classList.remove("is-active")
-            }
-        })
     })
+        ;[headerDiv, layoutModule].forEach(function (element) {
+            element.addEventListener("click", function () {
+                //console.log('headerDiv, layoutModule Clicked')
+                if (headerDiv.classList.contains("headerOpen")) {
+                    headerDiv.style.maxHeight = 50 + `px`
+                    headerDiv.style.height = 50 + `px`
+                    headerDiv.classList.remove("headerOpen")
+                    hamBurgerBtn.classList.remove("is-active")
+                }
+            })
+        })
 }
 
 function mobileNav() {
-    const hamBurgerBtn = document.querySelector('.hamburger')
+    const hamBurgerBtn = document.querySelector(".hamburger")
     const headerDiv = document.getElementById("myHeader")
     const layoutModule = document.getElementById("layoutModule")
     toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule)
 }
-
 
 function toggleMobileNavOnResize(headerDiv, hamBurgerBtn) {
     if (window.innerWidth >= 768) {
@@ -274,7 +250,7 @@ function toggleMobileNavOnResize(headerDiv, hamBurgerBtn) {
         hamBurgerBtn.classList.remove("is-active")
     }
 
-    if ((window.innerWidth < 768) && (headerDiv.classList.contains('headerOpen'))) {
+    if (window.innerWidth < 768 && headerDiv.classList.contains("headerOpen")) {
         headerDiv.style.height = `auto`
         headerDiv.style.maxHeight = 100 + `% `
         hamBurgerBtn.classList.add("is-active")
@@ -282,68 +258,72 @@ function toggleMobileNavOnResize(headerDiv, hamBurgerBtn) {
 }
 function mobileNavOnResize() {
     const headerDiv = document.getElementById("myHeader")
-    const hamBurgerBtn = document.querySelector('.hamburger')
+    const hamBurgerBtn = document.querySelector(".hamburger")
     toggleMobileNavOnResize(headerDiv, hamBurgerBtn)
 }
 
-
-function mobileFilterGalleryItem(e) {
+function filterGalleryItem(e, listAll) {
     e.addEventListener("click", function () {
-        if (!e.classList.contains('active')) {
-            e.classList.add("active")
+        if (!e.classList.contains("isActive")) {
+            //filterGalleryClick()
+            e.classList.add("isActive")
         } else {
-            e.classList.remove("active")
+            e.classList.remove("isActive")
         }
 
-    });
+        // if (e.id === 'all') {
+        //     //console.log("categoryFilter === All ")
+        //     //console.log("categoryFilterRemove === " + allItems)
+        //     for (let x = 0; x < listAll.length; x += 1) {
+        //         x.classList.remove("isActive")
+        //     }
+        // }
+    })
 }
 
-function mobileFilterGallery() {
-    const allItems = document.querySelectorAll('.filterGalleryBtn')
+function filterGalleryBtns() {
+    const allItems = document.querySelectorAll(".filterGalleryBtn")
     for (let x = 0; x < allItems.length; x += 1) {
-        mobileFilterGalleryItem(allItems[x])
-    }
-}
-
-
-
-
-function setStickyNav(navBar, sticky) {
-    var headerDiv = document.getElementById("myHeader")
-    var headerHeight = headerDiv.offsetHeight
-
-    if (window.pageYOffset >= sticky) {
-        navBar.classList.add("sticky-nav")
-        headerDiv.style.height = headerHeight + "px"
-    } else {
-        navBar.classList.remove("sticky-nav")
+        filterGalleryItem(allItems[x], allItems)
     }
 }
 
 // Resize grid
-const resizeGridItem = (item) => {
-    const grid = document.querySelector('.grid'),
-        rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')),
-        rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap')),
-        rowSpan = Math.ceil((item.querySelector('.item-content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap))
+const resizeGridItem = item => {
+    const grid = document.querySelector(".grid"),
+        rowHeight = parseInt(
+            window.getComputedStyle(grid).getPropertyValue("grid-auto-rows")
+        ),
+        rowGap = parseInt(
+            window.getComputedStyle(grid).getPropertyValue("grid-row-gap")
+        ),
+        rowSpan = Math.ceil(
+            (item.querySelector(".item-content").getBoundingClientRect().height +
+                rowGap) /
+            (rowHeight + rowGap)
+        )
     item.style.gridRowEnd = `span ${rowSpan} `
-
+    //console.log("Grid updated")
 },
     resizeAllGridItems = () => {
-        const allItems = document.querySelectorAll('.item')
+        const allItems = document.querySelectorAll(".item")
         for (let x = 0; x < allItems.length; x += 1) {
             resizeGridItem(allItems[x])
         }
     }
 
 // Fancy hover the grid
-const hoverGridItem = (hoverItem) => {
+const hoverGridItem = hoverItem => {
     hoverItem.addEventListener("mouseover", function (evt) {
         //console.log('hover gallery item')
         var spin = 0
         var precision = 1000
         //spin = Math.floor(Math.random() * (4.00)),
-        spin = Math.floor(Math.random() * (1.00 * precision - 1 * precision) + 1 * precision) / (1 * precision)
+        spin =
+            Math.floor(
+                Math.random() * (1.0 * precision - 1 * precision) + 1 * precision
+            ) /
+            (1 * precision)
         spin *= Math.floor(Math.random() * 2) === 1 ? 1 : -1
         hoverItem.style.transform = `rotate(` + spin + `deg)`
     })
@@ -352,7 +332,7 @@ const hoverGridItem = (hoverItem) => {
     })
 },
     hoverGridItems = () => {
-        const allHoverItems = document.querySelectorAll('.item')
+        const allHoverItems = document.querySelectorAll(".item")
         for (let x = 0; x < allHoverItems.length; x += 1) {
             hoverGridItem(allHoverItems[x])
         }

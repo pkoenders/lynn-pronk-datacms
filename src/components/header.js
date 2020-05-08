@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import MainNav from "./main-nav"
 //import "../styles/index.scss"
 import "../styles/hamburger.scss"
+import ContactBGroundImg from './contact-bground-img'
 import headerStyles from "./header.module.scss"
 import Signature from "../img/svg/signature.svg"
 
@@ -39,6 +40,8 @@ const Header = () => {
       </button>
 
       <header id="myHeader" className={headerStyles.header + ' ' + headerStyles.aside}>
+        {/* <ContactBGroundImg /> */}
+
         <div>
           <Link to="/" title="Home" >
             <div className={headerStyles.avatar}>

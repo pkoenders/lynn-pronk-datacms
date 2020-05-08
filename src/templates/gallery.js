@@ -37,6 +37,8 @@ const PortfolioPage = ({ data, pageContext }) => {
   console.log(pageContext)
   const { next, previous } = pageContext
 
+
+
   return (
     < div >
       <Helmet
