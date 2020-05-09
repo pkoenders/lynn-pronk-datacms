@@ -53,7 +53,7 @@
 }
 
 .nav-item:hover:after {
-  border-bottom: 1px solid #c7419c;
+  border-bottom: 1px solid #a24585;
   transform: scaleX(1);
   // from center out
   transform: scaleX(1);
@@ -65,6 +65,6 @@
 
 .active-nav-item {
   color: #ffffff;
-  background-color: #c7419c;
+  background-color: #a24585;
   //border: 1px solid #c7419c;
 }
