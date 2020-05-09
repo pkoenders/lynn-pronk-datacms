@@ -7,6 +7,7 @@ import GalleryFilter from "./gallery-filter"
 
 //const GalleryContainer = (props) => {
 let categoryFilter = "homepage"
+let categoryFilterTxt = "all"
 let layoutFilteredState = null
 let layoutFilteredGallery
 
@@ -69,6 +70,8 @@ const hoverGridItem = hoverItem => {
 const updateFilter = (filterName) => {
   categoryFilter = categoryFilter.replace("homepage", "")
 
+
+
   if (!categoryFilter.includes(filterName)) {
     categoryFilter = categoryFilter + filterName + ","
     console.log("categoryFilter New! ===" + categoryFilter)
@@ -96,6 +99,15 @@ const updateFilter = (filterName) => {
       </>
     )
   }
+
+  categoryFilterTxt = categoryFilter
+  const regex = /,/gi;
+  categoryFilterTxt = categoryFilterTxt.replace('homepage', 'all')
+  categoryFilterTxt = categoryFilterTxt.replace(regex, ' ')
+  categoryFilterTxt = categoryFilterTxt.replace('adult child', 'child & adult')
+  categoryFilterTxt = categoryFilterTxt.replace('child adult', 'child & adult')
+  //categoryFilterTxt = categoryFilterTxt.replace(regex, " ")
+
 }
 
 class GalleryContainer extends React.Component {
@@ -123,6 +135,8 @@ class GalleryContainer extends React.Component {
       layoutFilteredGallery = layoutFilteredGallery
     } else {
       categoryFilter = "homepage"
+
+      //categoryFilter = "all"
       layoutFilteredGallery = (
         <>
 
@@ -132,7 +146,7 @@ class GalleryContainer extends React.Component {
     }
     return (
       <>
-        <GalleryFilter updateFilterClick={(this.handleFilterClick)} />
+        <GalleryFilter updateFilterClick={(this.handleFilterClick)} categoryFilterTxt={categoryFilterTxt} />
         {layoutFilteredGallery}
       </>
     )
