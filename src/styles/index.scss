@@ -1,7 +1,9 @@
 @import "./media-queries"; //
 
-/* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
+$primaryColor: #a24585;
+$secondaryColor: #a24585;
 
+/* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -457,11 +459,11 @@ button.buttonSecondary:focus,
 button.buttonSecondary.isActive,
 .buttonSecondary.isActive {
   border: 1px solid transparent;
-  background-color: #a24585;
+  background-color: $primaryColor;
 }
 button.buttonSecondary:hover,
 .buttonSecondary:hover {
-  border: 1px solid #a24585;
+  border: 1px solid $primaryColor;
   //background-color: transparent;
 }
 

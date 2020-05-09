@@ -178,7 +178,8 @@ export const onRouteUpdate = (_, pluginOptions) => {
     document.addEventListener("DOMContentLoaded", ready())
 
     // Scroll etc
-    "scroll touchmove resize".split(" ").forEach(function (e) {
+    //"scroll touchmove resize".split(" ").forEach(function (e) {
+    "resize".split(" ").forEach(function (e) {
         window.addEventListener(e, () => {
             //initStickyHeader()
             resizeAllGridItems()
