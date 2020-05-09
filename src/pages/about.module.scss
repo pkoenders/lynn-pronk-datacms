@@ -1,0 +1,42 @@
+body {
+  // background-color: #dad8d8;
+  // background-image: none;
+}
+
+.aboutWrapper {
+  display: block;
+  max-width: 800px;
+  margin: 15px auto 0;
+
+  h2 {
+    text-align: center;
+    color: #eff0f1;
+  }
+
+  .aboutContent {
+    display: block;
+    //background-color: #f7eeee;
+    background-color: #ffffff;
+    padding: 3rem 0 0;
+
+    p,
+    h3,
+    ul {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+    .imgWrapper {
+      display: block;
+      margin: 45px 0;
+    }
+    .imgWrapper:last-child {
+      margin: 0px 0;
+    }
+
+    ul {
+      li {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

@@ -17,11 +17,11 @@ const ContactPage = () => {
         </div>
 
         <div className={contactStyles.contactFormWrapper}>
-          <h2>Contact Lynn</h2>
+          <h2>Thanks for visiting my gallery!</h2>
           <div className={contactStyles.contactForm}>
 
 
-            <p><strong>Thanks for visiting my website!</strong></p>
+            {/* <p><strong>Thanks for visiting my website!</strong></p> */}
             <p>I would love to be contacted to discuss work commissions or just hear your thoughts and ideas.
 I will always reply.</p>
 
