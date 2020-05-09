@@ -1,5 +1,7 @@
 @import "../styles/media-queries";
 
+$headerBgColor: #0b1f35;
+
 .aside {
   justify-content: initial;
 
@@ -22,7 +24,7 @@
 
   align-items: center;
 
-  background-color: #081727;
+  background-color: $headerBgColor;
   position: fixed;
   z-index: 1100;
   top: 0;
@@ -84,7 +86,7 @@
       height: 125px;
       > div {
         top: 0;
-        border: 6px solid #081827;
+        border: 6px solid $headerBgColor;
         position: absolute;
         border-radius: 50%;
       }
