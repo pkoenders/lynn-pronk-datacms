@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Gallery from "./gallery"
 import GalleryFilter from "./gallery-filter"
+import sal from 'sal.js'
+
 
 
 
@@ -124,6 +126,7 @@ class GalleryContainer extends React.Component {
   }
 
   componentDidUpdate() {
+    sal()
     resizeAllGridItems()
     hoverGridItems()
   }

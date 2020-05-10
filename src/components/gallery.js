@@ -6,7 +6,6 @@ import Img from "gatsby-image"
 import blogStyles from "../pages/portfolio.module.scss"
 import IconEnlarge from "../img/svg/icon-enlarge.svg"
 import IconArrowRight from "../img/svg/icon-arrow-right.svg"
-import sal from 'sal.js'
 
 
 
@@ -21,9 +20,8 @@ import sal from 'sal.js'
 function Gallery({ categoryFilter }) {
 
 
-  function componentDidUpdate() {
-    sal()
-  }
+
+
 
 
 
