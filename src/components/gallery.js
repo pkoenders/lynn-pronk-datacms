@@ -9,6 +9,7 @@ import IconArrowRight from "../img/svg/icon-arrow-right.svg"
 import sal from 'sal.js'
 
 
+
 //import GalleryFilter from "./gallery-filter"
 
 //const Gallery = (props) => {
@@ -19,7 +20,12 @@ import sal from 'sal.js'
 
 function Gallery({ categoryFilter }) {
 
-  sal();
+
+  function componentDidUpdate() {
+    sal()
+  }
+
+
 
   const [showLightbox, setShowLightbox] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
@@ -76,6 +82,8 @@ function Gallery({ categoryFilter }) {
   //console.log("current categoryFilter = " + categoryFilter)
 
   return (
+
+
     <>
       {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
       <ol id="myBlogList" className={blogStyles.posts + " " + "grid"}>
