@@ -19,8 +19,8 @@ const Header = () => {
 
       file(relativePath: { eq: "img/lynn-avatar.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 123, maxHeight: 123, quality: 60) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -39,7 +39,6 @@ const Header = () => {
       </button>
 
       <header id="myHeader" className={headerStyles.header + ' ' + headerStyles.aside}>
-        {/* <ContactBGroundImg /> */}
 
         <div>
           <Link to="/" title="Home" >

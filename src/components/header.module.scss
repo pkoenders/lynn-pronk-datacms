@@ -68,9 +68,10 @@ $headerBgColor: #0b1f35;
     padding: 15px 15px;
 
     max-height: 100%;
+    overflow: hidden;
 
     .avatar {
-      //display: flex;
+      display: flex;
       //justify-content: center;
       //align-items: center;
       //border-top: 1px solid #bfb9b9;
@@ -84,11 +85,15 @@ $headerBgColor: #0b1f35;
       padding: 3px;
       width: 125px;
       height: 125px;
+      z-index: 10;
       > div {
+        width: 119px;
+        height: 119px;
         top: 0;
         border: 6px solid $headerBgColor;
-        position: absolute;
+        //position: absolute;
         border-radius: 50%;
+        z-index: -1;
       }
     }
 
@@ -97,7 +102,7 @@ $headerBgColor: #0b1f35;
       top: 0;
       position: absolute;
       border-radius: 50%;
-      z-index: -1;
+      z-index: -2;
       //border: 5px solid #081827;
       //border: 5px solid transparent;
       //padding: 5px;
@@ -130,7 +135,8 @@ $headerBgColor: #0b1f35;
       }
       .avatarMobile {
         margin: 50px auto 0 auto;
-        display: block;
+
+        display: flex;
       }
       svg {
         position: absolute;
