@@ -7,7 +7,6 @@ import contactStyles from './contact.module.scss';
 const ContactPage = () => {
   return (
     <div>
-      {/* <ContactBGroundImg /> */}
       <Header />
       <Layout>
         <Head title="Contact" />
@@ -25,6 +24,8 @@ const ContactPage = () => {
             <p>I would love to be contacted to discuss work commissions or just hear your thoughts and ideas.
 I will always reply.</p>
 
+
+            <p>You can call me on <a href="tel:+64 27 4583 948">+64 27 4583 948</a> or <a href="tel:+64 9 3784 087">+64 9 3784 087</a>. Alternativly, complete the form for email enquires. Thank you.</p>
             <div className={contactStyles.contactFormInput}>
               <form
                 method="post"

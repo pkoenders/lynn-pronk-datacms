@@ -6,6 +6,8 @@ import Img from "gatsby-image"
 import blogStyles from "../pages/portfolio.module.scss"
 import IconEnlarge from "../img/svg/icon-enlarge.svg"
 import IconArrowRight from "../img/svg/icon-arrow-right.svg"
+import sal from 'sal.js'
+
 
 //import GalleryFilter from "./gallery-filter"
 
@@ -16,6 +18,8 @@ import IconArrowRight from "../img/svg/icon-arrow-right.svg"
 
 
 function Gallery({ categoryFilter }) {
+
+  sal();
 
   const [showLightbox, setShowLightbox] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
@@ -96,7 +100,13 @@ function Gallery({ categoryFilter }) {
                   />
                 )}
 
-                <div className={"item-content"} onClick={handleOpen(i)} key={i}>
+                <div
+                  className={"item-content"}
+                  onClick={handleOpen(i)} key={i}
+                  data-sal="fade"
+                  data-sal-delay="300"
+                  data-sal-easing="ease"
+                >
                   <Img
                     fluid={edge.node.coverImage.fluid}
                     alt={edge.node.coverImage.alt}

@@ -174,6 +174,13 @@
   .portfolioContent {
     border: none;
     padding: 35px 60px 25px;
+    @include respond-below(sm) {
+      padding: 30px 30px;
+    }
+    @include respond-below(xs) {
+      padding: 15px 15px;
+    }
+
     margin: 0;
     height: auto;
     background-color: #e1e8f1;

@@ -88,9 +88,7 @@ const PortfolioPage = ({ data, pageContext }) => {
           </div>
 
 
-          <div className={blogStyles.portfolioContent}>
-            <div dangerouslySetInnerHTML={{ __html: data.datoCmsPortfolio.description }} />
-          </div>
+
 
 
           <div className={blogStyles.portfolioPage}>
@@ -109,6 +107,11 @@ const PortfolioPage = ({ data, pageContext }) => {
             </div>
 
           </div>
+
+          <div className={blogStyles.portfolioContent}>
+            <div dangerouslySetInnerHTML={{ __html: data.datoCmsPortfolio.description }} />
+          </div>
+
         </div >
       </Layout >
     </div >
