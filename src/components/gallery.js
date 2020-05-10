@@ -104,7 +104,7 @@ function Gallery({ categoryFilter }) {
                   className={"item-content"}
                   onClick={handleOpen(i)} key={i}
                   data-sal="fade"
-                  data-sal-delay="300"
+                  data-sal-duration="300"
                   data-sal-easing="ease"
                 >
                   <Img
