@@ -29,6 +29,11 @@ const BlogPage = props => {
           rel="preconnect"
           href="https://lynn-pronk-datocms.netlify.app/"
         ></link>
+
+        <link
+          rel="preconnect"
+          href="https://www.datocms-assets.com"
+        ></link>
       </Helmet>
       <Head title="Home" />
       {/* <IndexBGroundImg /> */}
