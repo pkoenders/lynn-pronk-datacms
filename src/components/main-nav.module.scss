@@ -1,4 +1,4 @@
-@import "../styles/media-queries"; //
+@import "../styles/scss";
 
 .link {
   color: #999999;
@@ -53,7 +53,7 @@
 }
 
 .nav-item:hover:after {
-  border-bottom: 1px solid #a24585;
+  border-bottom: 1px solid $primaryColor;
   transform: scaleX(1);
   // from center out
   transform: scaleX(1);
@@ -65,6 +65,7 @@
 
 .active-nav-item {
   color: #ffffff;
-  background-color: #a24585;
-  //border: 1px solid #c7419c;
+  background-color: $primaryColor;
+  border: 1px solid $primaryColorA;
+  border-bottom: 2px solid $primaryColorA;
 }
