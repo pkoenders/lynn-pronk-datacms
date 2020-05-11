@@ -30,6 +30,8 @@ const BlogPage = props => {
           href="https://lynn-pronk-datocms.netlify.app/"
         ></link>
 
+        <link rel="preload" href="https://www.datocms-assets.com"> </link>
+
         {/* <link
           rel="preconnect"
           href="https://www.datocms-assets.com"
