@@ -32,7 +32,7 @@ const BlogPage = props => {
 
         <link
           rel="preconnect"
-          href="https://www.datocms-assets.com/26318/"
+          href="https://www.datocms-assets.com/"
         ></link>
 
         <link
