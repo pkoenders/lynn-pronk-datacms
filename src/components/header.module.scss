@@ -53,10 +53,12 @@ $headerBgColor: #0b1f35;
   //transform: scaleY(1);
 
   padding: 0 3rem;
+  height: 100vh;
 
   @include respond-below(sm) {
     padding: 0;
     height: 50px;
+    overflow: hidden;
     //background-color: #25303c;
   }
   //background-color: #AD0840;
@@ -66,9 +68,10 @@ $headerBgColor: #0b1f35;
 
   > div {
     padding: 15px 15px;
-
+    overflow: initial;
     max-height: 100%;
-    overflow: hidden;
+
+    // overflow: hidden;
 
     .avatar {
       display: flex;
@@ -123,6 +126,7 @@ $headerBgColor: #0b1f35;
     }
 
     svg {
+      display: flex;
       width: 100%;
     }
 
@@ -136,7 +140,7 @@ $headerBgColor: #0b1f35;
       .avatarMobile {
         margin: 50px auto 0 auto;
 
-        display: flex;
+        display: block;
       }
       svg {
         position: absolute;
