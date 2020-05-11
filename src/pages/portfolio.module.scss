@@ -4,19 +4,20 @@
 }
 
 .filterPosts {
-  margin: 30px 15px 15px 15px;
+  margin: 30px 15px 0px 15px;
   display: block;
 
   text-align: center;
   button {
     // margin: 0 15px 15px 0;
-    margin: 0 0.04rem;
+    margin: 0 7.5px;
     width: min-content;
   }
   p {
     color: #9eb1c5;
     font-size: 0.7em;
-    margin: 15px 0 0 0;
+    margin: 15px 0 5px 0;
+    text-transform: uppercase;
   }
 }
 

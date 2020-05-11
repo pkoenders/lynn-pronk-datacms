@@ -3,10 +3,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import Header from "../components/header"
 import Helmet from "react-helmet"
-//import blogStyles from "./portfolio.module.scss"
-import Gallery from "../components/gallery"
 import GalleryContainer from "../components/gallery-container"
-// import GalleryFilter from "../components/gallery-filter"
 
 const BlogPage = props => {
   const categoryFilter = "homepage"

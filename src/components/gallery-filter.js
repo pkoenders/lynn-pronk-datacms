@@ -19,7 +19,7 @@ function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
 
   return (
     <div className={blogStyles.filterPosts}>
-
+      <p>Viewing {categoryFilterTxt} portraits</p>
       <span>
         <button
           type="button"
@@ -47,21 +47,6 @@ function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
           Adult Portraits
         </button>
       </span>
-
-      {/* <span>
-        <button
-          type="button"
-          name="All Portraits"
-          id='all'
-          class="buttonSecondary filterGalleryBtn"
-          onClick={clickFilter}
-        >
-          Show all
-        </button>
-      </span> */}
-
-      <p>Viewing {categoryFilterTxt} portraits</p>
-
     </div >
   )
 }
