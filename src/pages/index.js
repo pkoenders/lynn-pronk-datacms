@@ -31,14 +31,16 @@ const BlogPage = props => {
         ></link>
 
         <link
+          rel="preconnect"
+          href="https://www.datocms-assets.com/26318/"
+        ></link>
+
+        <link
           rel="preload"
           href="https://www.datocms-assets.com/26318/"
         ></link>
 
-        {/* <link
-          rel="preconnect"
-          href="https://www.datocms-assets.com"
-        ></link> */}
+
       </Helmet>
       <Head title="Home" />
       {/* <IndexBGroundImg /> */}
