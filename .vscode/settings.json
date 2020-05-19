@@ -1,4 +1,6 @@
 {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.fontStyle": "Italic",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Fira Code iScript', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true
 }
