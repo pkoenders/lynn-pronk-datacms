@@ -14,6 +14,7 @@ module.exports = {
 
   plugins: [
 
+
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {

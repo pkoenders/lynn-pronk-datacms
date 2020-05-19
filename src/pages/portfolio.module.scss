@@ -107,6 +107,7 @@
   .portfolioPage {
     padding: 60px 60px 1px;
     background-color: #ffffff;
+    background-color: #f6f4f2;
     @include respond-below(sm) {
       padding: 30px 30px 1px;
     }
@@ -128,7 +129,7 @@
   .portfolioNav {
     display: flex;
     padding: 0;
-    margin: 0px 15px 10px;
+    margin: 0px 15px 15px;
     position: relative;
     height: 40px;
 
@@ -184,7 +185,7 @@
 
     margin: 0;
     height: auto;
-    background-color: #e1e8f1;
+    background-color: #dedddb;
     p {
       margin-bottom: 0.3rem;
     }
