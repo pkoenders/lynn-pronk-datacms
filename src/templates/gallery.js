@@ -12,6 +12,7 @@ export const query = graphql`
     datoCmsPortfolio(slug: { eq: $slug }) {
       slug
       title
+      dateYear
       coverImage
         {
         url
@@ -26,6 +27,7 @@ export const query = graphql`
       description
       artworkWidth
       artworkHeight
+      medium
     }
   } 
 `

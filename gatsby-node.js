@@ -10,8 +10,10 @@ exports.createPages = ({ graphql, actions }) => {
         allDatoCmsPortfolio (sort: { fields: [position], order: ASC }) {
           edges {
             node {
-                slug title
-                coverImage 
+                slug
+                title
+                dateYear
+                coverImage
                 {
                   url
                   alt

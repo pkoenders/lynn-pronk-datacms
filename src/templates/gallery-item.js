@@ -54,13 +54,17 @@ const PortfolioPageItem = ({ data, pageContext }) => {
           />
 
           <div className={blogStyles.itemSizing}>
+            <div>
+              <p className={blogStyles.year}><span>{data.datoCmsPortfolio.dateYear}</span></p>
+            </div>
             <DimensionsIcon />
             <div>
               <p><span>W</span><span>{data.datoCmsPortfolio.artworkWidth + " cm"}</span></p>
               <p><span>H</span><span>{data.datoCmsPortfolio.artworkHeight + " cm"}</span></p>
             </div>
-          </div>
 
+          </div>
+          <p className={blogStyles.medium}>{data.datoCmsPortfolio.medium}</p>
         </div>
 
         <div className={blogStyles.portfolioContent}>

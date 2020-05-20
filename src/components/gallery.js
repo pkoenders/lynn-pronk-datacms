@@ -56,6 +56,7 @@ function Gallery({ categoryFilter }) {
             title
           }
           node {
+            dateYear
             title
             slug
             category

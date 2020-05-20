@@ -231,12 +231,12 @@
   .itemSizing {
     display: flex;
     width: fit-content;
-    margin: 30px auto;
+    margin: 30px auto 0 ;
 
     svg {
       width: 25px;
       height: 25px;
-      margin: 1px 10px 1px 0;
+      margin: 1px 10px 1px 20px;
     }
 
     p {
@@ -255,5 +255,24 @@
         font-weight: bold;
       }
     }
+  }
+  p.year {
+    display: inline-flex;
+    font-size: 0.8rem;
+    span {
+      font-weight: bold;
+  
+      align-items: center;
+    }
+  }
+
+  p.medium {
+    text-align: center;
+    font-size: 0.7rem;
+      line-height: 0.8rem;
+      text-transform: uppercase;
+      margin:7px 0 30px;
+      color: #5b6b7b;
+
   }
 }
