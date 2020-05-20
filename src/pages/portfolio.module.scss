@@ -1,18 +1,19 @@
 @import "../styles/media-queries"; //
 
-.grid {
-}
+.grid {}
 
 .filterPosts {
   margin: 30px 15px 0px 15px;
   display: block;
 
   text-align: center;
+
   button {
     // margin: 0 15px 15px 0;
     margin: 0 7.5px;
     width: min-content;
   }
+
   p {
     color: #9eb1c5;
     font-size: 0.7em;
@@ -25,14 +26,26 @@
   opacity: 0 !important;
 }
 
+
+
+[data-sal|=fade] {
+  border: 1px solid #0b1f3536;
+}
+
 .posts {
   display: grid;
-  padding: 15px;
-  grid-gap: 15px;
+  padding: 30px;
+  grid-gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 1px;
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0;
+
+
+  @include respond-below(sm) {
+    padding: 15px;
+    grid-gap: 15px;
+  }
 }
 
 .post {
@@ -42,12 +55,15 @@
   border-radius: 2px;
   overflow: hidden;
   position: relative;
+  //border: 1px solid $headerBgColor;
+
 
   span {
     position: absolute;
     bottom: 50px;
     right: 15px;
     opacity: 0.66;
+
     svg {
       height: 30px;
       width: 35px;
@@ -60,15 +76,19 @@
   }
 
   h2 {
-    color: #464141;
-    background-color: #efefef;
-    line-height: 1;
+    color: #ffffff;
+    background-color: #3c5168bf;
+
+    //background: rgb(37, 50, 64);
+    //background: linear-gradient(180deg, rgba(37, 50, 64, 1) 0%, rgba(54, 74, 94, 1) 5%);
+    line-height: .9rem;
     margin: 0;
     padding: 0.7rem 0.8rem;
-    font-size: 1rem;
+    font-size: .9rem;
     display: flex;
-    border-top: 1px solid #75879a;
+    border-top: 1px solid #253240;
     justify-content: space-between;
+
     svg {
       position: relative;
       height: 30px;
@@ -77,6 +97,13 @@
       margin: -6px 0;
     }
   }
+
+
+  h2:hover {
+    background-color: $primaryColor;
+  }
+
+
   p {
     color: #777777;
     font-size: 0.8rem;
@@ -98,6 +125,7 @@
   display: block;
   max-width: 800px;
   margin: 15px auto 0 auto;
+
   h2 {
     text-align: center;
     margin-bottom: 0px;
@@ -108,9 +136,11 @@
     padding: 60px 60px 1px;
     background-color: #ffffff;
     background-color: #f6f4f2;
+
     @include respond-below(sm) {
       padding: 30px 30px 1px;
     }
+
     @include respond-below(xs) {
       padding: 15px 15px 1px;
     }
@@ -152,6 +182,7 @@
         border: 1px solid #738496;
         overflow: hidden;
         position: relative;
+
         img {
           position: absolute;
           width: 80px;
@@ -159,6 +190,7 @@
           margin: -50%;
         }
       }
+
       span {
         margin: 0 0 0 10px;
       }
@@ -168,17 +200,21 @@
       right: 0px;
       left: auto;
       flex-direction: row-reverse;
+
       span {
         margin: 0 10px 0;
       }
     }
   }
+
   .portfolioContent {
     border: none;
     padding: 35px 60px 25px;
+
     @include respond-below(sm) {
       padding: 30px 30px;
     }
+
     @include respond-below(xs) {
       padding: 15px 15px;
     }
@@ -186,6 +222,7 @@
     margin: 0;
     height: auto;
     background-color: #dedddb;
+
     p {
       margin-bottom: 0.3rem;
     }
@@ -195,21 +232,25 @@
     display: flex;
     width: fit-content;
     margin: 30px auto;
+
     svg {
       width: 25px;
       height: 25px;
       margin: 1px 10px 1px 0;
     }
+
     p {
       font-size: 0.7rem;
       line-height: 0.8rem;
       margin-bottom: 0px;
       color: #5b6b7b;
+
       span {
         width: 20px;
         display: inline-flex;
       }
-      span + span {
+
+      span+span {
         width: auto;
         font-weight: bold;
       }
