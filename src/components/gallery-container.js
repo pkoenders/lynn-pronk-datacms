@@ -54,7 +54,7 @@ const hoverGridItem = hoverItem => {
         Math.random() * (1.0 * precision - 1 * precision) + 1 * precision
       ) /
       (1 * precision)
-    spin *= Math.floor(Math.random() * 2) === 1 ? 1 : -1
+    spin *= Math.floor(Math.random() * 1.5) === 1 ? 1 : -1
     hoverItem.style.transform = `rotate(` + spin + `deg)`
   })
   hoverItem.addEventListener("mouseout", function (evt) {

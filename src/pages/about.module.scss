@@ -17,11 +17,9 @@ body {
     display: block;
     //background-color: #f7eeee;
     background-color: #ffffff;
-    padding: 3rem 0 0;
+    padding: 3rem 0 1.5rem;
 
-    p,
-    h3,
-    ul {
+    > div {
       margin-left: 60px;
       margin-right: 60px;
     }

@@ -89,6 +89,9 @@
     border-top: 1px solid #253240;
     justify-content: space-between;
 
+    -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+
     svg {
       position: relative;
       height: 30px;
@@ -113,7 +116,7 @@
 
 .post:hover {
   box-shadow: 0 0 13px 5px rgba(0, 0, 0, 0.173);
-  transform: scale(1.05) rotate(2deg);
+ // transform: scale(1.05) rotate(2deg);
   cursor: pointer;
 }
 

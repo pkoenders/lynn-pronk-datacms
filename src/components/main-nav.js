@@ -39,6 +39,17 @@ const MainNav = ({ location }) => {
             About me
           </Link>
         </li>
+
+        <li>
+          <Link
+            className={mainNavStyles.navItem}
+            activeClassName={mainNavStyles.activeNavItem}
+            to="/testimonials"
+          >
+            Testimonials
+          </Link>
+        </li>
+
         <li>
           <Link
             className={mainNavStyles.navItem}
