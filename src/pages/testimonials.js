@@ -20,7 +20,7 @@ const AboutPage = () => {
 
   const data = useStaticQuery(graphql`
 query {
-    allDatoCmsTestimonial {
+      allDatoCmsTestimonial(sort: { fields: [position], order: ASC }) {
       edges {
         node {
           chooseColour {
