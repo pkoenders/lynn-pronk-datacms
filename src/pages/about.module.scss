@@ -1,7 +1,5 @@
-body {
-  // background-color: #dad8d8;
-  // background-image: none;
-}
+@import "../styles/scss";
+
 
 .aboutWrapper {
   display: block;
@@ -16,12 +14,12 @@ body {
   .aboutContent {
     display: block;
     //background-color: #f7eeee;
-    background-color: #ffffff;
+    //background-color: #ffffff;
     padding: 3rem 0 1.5rem;
 
     > div {
-      margin-left: 60px;
-      margin-right: 60px;
+      padding-left: 60px;
+      padding-right: 60px;
     }
     .imgWrapper {
       display: block;
@@ -35,6 +33,86 @@ body {
       li {
         margin-bottom: 15px;
       }
+    }
+
+    
+    .testimonial {
+      background-color: #ffffff;
+      padding: 30px 60px 30px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      width: fit-content;
+      height: fit-content;
+      display: inline-block;
+     // display: flex;
+     // border-bottom: 1px dotted #394f659e;
+
+     a {
+      display: block;
+      text-decoration: none;
+      }
+
+     .testimonialImgWrapper {
+       border-radius: 3px;
+       overflow: hidden;
+       width: 130px;
+      display: block;
+      float: left; 
+       margin:0 30px 0px -30px;
+       border: 1px solid #ffffff6b;
+           }
+
+      p.testimonialQuote::before {
+        content:"\201C";
+        top:23px;
+        left:-25px;      
+          //text-indent: -0px;
+          //margin-left: -30px;
+
+      }
+      p.testimonialQuote::after {
+        content:"\201D";
+        bottom:-0px;
+        //right:-25px;
+       // white-space: nowrap;
+       // display: inline;
+
+        //right:-30px;
+      }
+
+      p.testimonialQuote::before,  p.testimonialQuote::after {
+        font-size: 3.1rem;
+          line-height: 0px;
+          //display: block;
+          position: absolute;
+      }
+      p.testimonialQuote {
+        margin: 0 25px;
+        display: inline;
+        line-height: 1.3rem;
+        position: relative;
+        //text-indent: 30px;
+      }
+      p + p {
+        margin: 20px 0 0 0;
+        text-align: right;
+
+        span {
+
+        }
+        text-indent: 0px;
+      }
+    }
+
+    .testimonial:hover {
+      transition: $hoverTransition;
+      background-color: $primaryColor;
+      p{
+      color: #ffffff;
+      }
+    }
+    .testimonial:last-of-type {
+      margin-bottom: 0px;
     }
   }
 }
