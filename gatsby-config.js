@@ -16,20 +16,23 @@ module.exports = {
 
 
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
           {
             family: `Roboto`,
-            variants: [`400`, `700`]
+            variable: true,
+            weights: [`400..700`],
           },
           {
             family: `Roboto Slab`,
-            variants: [`400`, `700`]
+            variable: true,
+            weights: [`400..700`],
           },
           {
             family: `Spectral`,
-            variants: [`400`, `700`]
+            variable: true,
+            weights: [`400..700`],
           },
         ],
       },
