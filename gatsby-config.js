@@ -16,6 +16,26 @@ module.exports = {
 
 
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Roboto Slab`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Spectral`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
         threshold: .15, // Percentage of an element's area that needs to be visible to launch animation
@@ -50,7 +70,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /svg/
+          include: /\.inline\.svg$/
         }
       }
     },

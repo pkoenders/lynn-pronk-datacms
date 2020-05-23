@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import MainNav from "./main-nav"
 import "../styles/hamburger.scss"
 import headerStyles from "./header.module.scss"
-import Signature from "../img/svg/signature.svg"
+import Signature from "../img/svg/signature.inline.svg"
 
 
 

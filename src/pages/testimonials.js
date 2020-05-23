@@ -19,7 +19,7 @@ const TestimonialPage = () => {
 
         <div className={aboutStyles.aboutWrapper}>
           <h2>Testimonials</h2>
-          <div className={aboutStyles.aboutContent}>
+          <div className={aboutStyles.testimonialContent}>
 
             <Testimonial />
 

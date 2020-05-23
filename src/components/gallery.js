@@ -4,8 +4,8 @@ import LightBox from "./lightbox"
 //import updateFilter from "./gallery-container"
 import Img from "gatsby-image"
 import blogStyles from "../pages/portfolio.module.scss"
-import IconEnlarge from "../img/svg/icon-enlarge.svg"
-import IconArrowRight from "../img/svg/icon-arrow-right.svg"
+import IconEnlarge from "../img/svg/icon-enlarge.inline.svg"
+import IconArrowRight from "../img/svg/icon-arrow-right.inline.svg"
 
 
 

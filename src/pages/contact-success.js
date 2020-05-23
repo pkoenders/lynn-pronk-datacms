@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Head from '../components/head'
 import Header from "../components/header"
 import contactStyles from './contact.module.scss'
-import LikeIcon from "../img/svg/like.svg"
+import LikeIcon from "../img/svg/like.inline.svg"
 
 
 const ContactPage = () => {

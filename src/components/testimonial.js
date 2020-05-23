@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
-import aboutStyles from '../pages/about.module.scss';
+import aboutStyles from '../pages/about.module.scss'
 
 
 const Testimonial = () => {
@@ -88,7 +88,7 @@ const Testimonial = () => {
                                 <p className={aboutStyles.testimonialQuote}>
                                     {edge.node.testmonial}&nbsp;
                                 </p>
-                                <p><strong>{edge.node.name}</strong> - <span>{edge.node.dateOfTestmonial}</span></p>
+                                <p className={aboutStyles.link}><strong>{edge.node.name}</strong> - <span>{edge.node.dateOfTestmonial}</span></p>
                             </Link>
 
                         </div>

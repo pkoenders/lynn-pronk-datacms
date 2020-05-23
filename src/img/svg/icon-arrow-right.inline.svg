@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="26px" viewBox="0 0 31 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
+    <title>Right arrow</title>
+    <desc>Right arrow</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <path d="M1.40531462,13 L29.4285714,13" stroke="#ffffff" stroke-width="2"></path>
+        <path d="M17.973545,1.19047619 L29.4550265,13" stroke="#ffffff" stroke-width="2"></path>
+        <path d="M17.973545,13 L29.4550265,24.8095238" stroke="#ffffff" stroke-width="2" transform="translate(23.714286, 18.904762) scale(1, -1) translate(-23.714286, -18.904762) "></path>
+    </g>
+</svg>
