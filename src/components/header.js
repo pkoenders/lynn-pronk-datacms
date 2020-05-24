@@ -67,7 +67,6 @@ const Header = (props) => {
       </button>
 
       <header id="myHeader" className={headerStyles.header + ' ' + headerStyles.aside}>
-
         <div className={headerStyles.wrapper}>
 
           <Link to="/" title="Home" >
@@ -80,7 +79,6 @@ const Header = (props) => {
             <Signature />
           </Link>
 
-
           <Link to="/" title="Home"  >
             <div className={headerStyles.avatar + ' ' + headerStyles.avatarMobile}>
               <Img
@@ -90,11 +88,9 @@ const Header = (props) => {
             </div>
           </Link>
 
-
           <MainNav />
 
           <hr />
-
           <p>Please download my free ebook as a PDF file</p>
           <div className={headerStyles.eBook}>
             <Img
@@ -103,10 +99,8 @@ const Header = (props) => {
             />
             <p>Mikki’s magic day</p>
           </div>
-
-
+          <hr />
         </div>
-
       </header>
     </>
   )

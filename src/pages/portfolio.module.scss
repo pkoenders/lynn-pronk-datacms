@@ -37,13 +37,9 @@
   padding: 30px;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-
-
   grid-auto-rows: 0px;
   list-style-type: none;
   margin: 0;
-
-
 
   @include respond-below(sm) {
     padding: 15px;
