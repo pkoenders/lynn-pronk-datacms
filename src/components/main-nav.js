@@ -42,7 +42,9 @@ const MainNav = ({ location }) => {
 
         <li>
           <Link
-            className={mainNavStyles.navItem}
+            // className={mainNavStyles.navItem}
+
+            className={link.includes("/testimonials/") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
             activeClassName={mainNavStyles.activeNavItem}
             to="/testimonials"
           >
