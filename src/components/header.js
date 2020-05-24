@@ -68,7 +68,8 @@ const Header = (props) => {
 
       <header id="myHeader" className={headerStyles.header + ' ' + headerStyles.aside}>
 
-        <div>
+        <div className={headerStyles.wrapper}>
+
           <Link to="/" title="Home" >
             <div className={headerStyles.avatar}>
               <Img
@@ -89,21 +90,22 @@ const Header = (props) => {
             </div>
           </Link>
 
+
+          <MainNav />
+
+          <hr />
+
+          <p>Please download my free ebook as a PDF file</p>
+          <div className={headerStyles.eBook}>
+            <Img
+              alt={'Mikkis magic day'}
+              fluid={data.mikkisPDF.childImageSharp.fluid}
+            />
+            <p>Mikki’s magic day</p>
+          </div>
+
+
         </div>
-        <MainNav />
-
-        <hr />
-
-        <p>Please download my free ebook as a PDF file</p>
-        <div className={headerStyles.eBook}>
-          <Img
-            alt={'Mikkis magic day'}
-            fluid={data.mikkisPDF.childImageSharp.fluid}
-          />
-          <p>Mikki’s magic day</p>
-        </div>
-
-
 
       </header>
     </>

@@ -204,56 +204,64 @@ function ready() {
 
 function toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule) {
     hamBurgerBtn.addEventListener("click", function () {
+        headerDiv.scrollTop = 0
         //console.log('Hamburger Clicked')
         if (headerDiv.offsetHeight <= 50) {
-            headerDiv.style.height = `auto`
-            headerDiv.style.maxHeight = 100 + `%`
+            headerDiv.style.height = `100vh`
+            headerDiv.style.overflowY = `auto`
             headerDiv.classList.add("headerOpen")
             hamBurgerBtn.classList.add("is-active")
             //console.log('Hamburger Clicked 2')
         } else {
-            headerDiv.style.maxHeight = 50 + `px`
             headerDiv.style.height = 50 + `px`
+            headerDiv.style.overflowY = `hidden`
             headerDiv.classList.remove("headerOpen")
             hamBurgerBtn.classList.remove("is-active")
         }
-    })
-        ;[headerDiv, layoutModule].forEach(function (element) {
-            element.addEventListener("click", function () {
-                //console.log('headerDiv, layoutModule Clicked')
-                if (headerDiv.classList.contains("headerOpen")) {
-                    headerDiv.style.maxHeight = 50 + `px`
-                    headerDiv.style.height = 50 + `px`
-                    headerDiv.classList.remove("headerOpen")
-                    hamBurgerBtn.classList.remove("is-active")
-                }
-            })
+    });
+
+    [headerDiv, layoutModule].forEach(function (element) {
+        element.addEventListener("click", function () {
+            //console.log('headerDiv, layoutModule Clicked')
+            if (headerDiv.classList.contains("headerOpen")) {
+                headerDiv.style.height = 50 + `px`
+                headerDiv.style.overflowY = `hidden`
+                headerDiv.classList.remove("headerOpen")
+                hamBurgerBtn.classList.remove("is-active")
+            }
         })
+    })
 }
 
 function mobileNav() {
     const hamBurgerBtn = document.querySelector(".hamburger")
     const headerDiv = document.getElementById("myHeader")
     const layoutModule = document.getElementById("layoutModule")
+
     toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule)
 }
 
 function toggleMobileNavOnResize(headerDiv, hamBurgerBtn) {
     if (window.innerWidth >= 768) {
+        headerDiv.scrollTop = 0
         //console.log('Widow is > 576px')
-        headerDiv.style.height = `auto`
-        headerDiv.style.maxHeight = 100 + `% `
+        headerDiv.style.height = `100vh`
+        headerDiv.style.overflowY = `auto`
+
         headerDiv.classList.remove("headerOpen")
         hamBurgerBtn.classList.remove("is-active")
     } else {
-        headerDiv.style.height = `auto`
-        headerDiv.style.maxHeight = 50 + `px`
+        headerDiv.style.height = 50 + `px`
+        headerDiv.style.scrollTop = 0
+        headerDiv.style.overflowY = `hidden`
         hamBurgerBtn.classList.remove("is-active")
     }
 
     if (window.innerWidth < 768 && headerDiv.classList.contains("headerOpen")) {
+        headerDiv.scrollTop = 0
         headerDiv.style.height = `auto`
         headerDiv.style.maxHeight = 100 + `% `
+        headerDiv.style.overflowY = `auto`
         hamBurgerBtn.classList.add("is-active")
     }
 }
