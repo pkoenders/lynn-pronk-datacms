@@ -3,6 +3,8 @@
 .aside {
   justify-content: initial;
 
+  font-size: .9rem;
+  text-align: center;
   overflow-y: hidden;
   width: 300px;
   @include respond-below(sm) {
@@ -23,6 +25,7 @@
   align-items: center;
 
   background-color: $headerBgColor;
+  color:$headerFgColor;
   position: fixed;
   z-index: 1100;
   top: 0;
@@ -50,7 +53,7 @@
   bottom: 0;
   //transform: scaleY(1);
 
-  padding: 0 3rem;
+  padding: 0;
   height: 100vh;
 
   @include respond-below(sm) {
@@ -66,11 +69,11 @@
 
   > div {
     padding: 15px 15px;
+    margin: 0 2.5rem;
     overflow: initial;
+    position: relative;
     max-height: 100%;
-
-    // overflow: hidden;
-
+    
     .avatar {
       display: flex;
       //justify-content: center;
@@ -117,6 +120,7 @@
       //background: #243240;
       width: 100%;
       height: 100%;
+      display: block;
     }
 
     .avatarMobile {
@@ -131,7 +135,6 @@
     @include respond-below(sm) {
       padding: 10px 15px;
       margin: 0 auto;
-      display: flex;
       .avatar {
         display: none;
       }
@@ -159,23 +162,46 @@
     justify-content: center;
   }
 
+  hr {
+    //background-color:$pageBgColor;
+    border-bottom:1px dotted $pageBgColor;
+
+    margin: 0 -5rem 15px;
+    left:0;
+    right: 0;
+  }
+
+  p {
+    margin: 0 30px 10px;
+  }
+
   .eBook {
-    width: 150px;
+    width: 175px;
+    height: 100%;
     padding: 0;
-    margin-top: 30px;
+    margin: 0px 0 30px;
     background-color: #364a5e;
-    border-radius: 2px;
+    border-radius: 3px;
+    //overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: $hoverTransition;
+    border: 1px solid #ffffff1e;
+
     p {
       line-height: 1.2rem;
       font-size: .8rem;
       color:#ffffff;
       text-align: center;
       margin:15px 10px;
+      font-family: 'Roboto Slab', serif;
+        letter-spacing: .01rem;
+        text-transform: capitalize;
+        font-size: .9rem;
       strong {
         margin-top: 7.5px;
         display: block;
+
+        
 
       }
 

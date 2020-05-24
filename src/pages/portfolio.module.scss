@@ -42,6 +42,7 @@
   margin: 0;
 
 
+
   @include respond-below(sm) {
     padding: 15px;
     grid-gap: 15px;
@@ -52,10 +53,12 @@
   height: fit-content;
   transition: all 0.2s ease-in-out;
   z-index: 5;
-  border-radius: 2px;
+
   overflow: hidden;
   position: relative;
-  //border: 1px solid $headerBgColor;
+  border-radius: 5px;
+//border: 1px solid $headerBgColor;
+
 
 
   span {
@@ -82,6 +85,7 @@
     //background: rgb(37, 50, 64);
     //background: linear-gradient(180deg, rgba(37, 50, 64, 1) 0%, rgba(54, 74, 94, 1) 5%);
     line-height: .9rem;
+    font-weight: 600;
     margin: 0;
     padding: 1rem 0.8rem;
     font-size: .9rem;
@@ -89,8 +93,7 @@
     border-top: 1px solid #253240;
     justify-content: space-between;
 
-    -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
-    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+    transition:$hoverTransition;
 
     svg {
       position: relative;
@@ -127,18 +130,19 @@
 .portfolioPageWrapper {
   display: block;
   max-width: 800px;
-  margin: 15px auto 0 auto;
+  margin: 15px auto 30px auto;
 
   h2 {
     text-align: center;
-    margin-bottom: 0px;
-    color: #eff0f1;
+    color: $whiteText;
+    margin: 2rem 0 .5rem 0;
   }
 
   .portfolioPage {
     padding: 60px 60px 1px;
     background-color: #ffffff;
     background-color: #f6f4f2;
+    border-radius: 5px 5px 0 0;
 
     @include respond-below(sm) {
       padding: 30px 30px 1px;
@@ -214,6 +218,8 @@
   .portfolioContent {
     border: none;
     padding: 35px 60px 25px;
+    border-radius: 0 0 5px 5px;
+
 
     @include respond-below(sm) {
       padding: 30px 30px;

@@ -13,7 +13,7 @@ const ContactPage = () => {
 
   return (
     <div>
-      <ContactBGroundImg />
+      {/* <ContactBGroundImg /> */}
       <Header />
       <Layout>
         <Head title="Contact" />

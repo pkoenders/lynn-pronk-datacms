@@ -50,23 +50,6 @@ export const pageQuery = graphql`
 `;
 
 
-// //const aboutMe = useStaticQuery(graphql`
-// export const aboutMe = graphql`
-// aboutMeQuery {
-//   datoCmsAboutMe {
-//     title
-//     bio
-//     intro
-//     howToCommissionAPortrait
-//     photo {
-//       url
-//       title
-//       alt
-//     }
-//   }
-// }
-// `;
-
 
 const AboutPage = (props) => {
 
@@ -74,7 +57,7 @@ const AboutPage = (props) => {
 
   return (
     <div>
-      <IndexBGroundImg />
+      {/* <IndexBGroundImg /> */}
       <Header />
       <Layout>
         <Head title="About Lynn Pronk" />

@@ -8,7 +8,7 @@
 
   h2 {
     text-align: center;
-    color: #eff0f1;
+    color: $whiteText;
     margin: 2rem 0;
   }
 
@@ -16,7 +16,9 @@
     display: block;
     //background-color: #f7eeee;
     background-color: #ffffff;
-    padding: 0rem 0 1.5rem;
+    padding: 2.5rem 0 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 30px;
 
     > div {
       padding-left: 60px;
@@ -116,10 +118,13 @@
       p + p {
         margin: 20px 0 -0px 0;
         text-align: left;
+            font-family: 'Roboto Slab', serif;
+        letter-spacing: .01rem;
       }
       p + p.link {
         padding-right: 40px;
         background: url(../img/icon-arrow-right-alt.svg) no-repeat top right;
+    
       }
     }
    
@@ -140,5 +145,6 @@
   }
   .testimonialContent {
     background-color: transparent;
+    padding: 0 0 1.5rem;
   }
 }
