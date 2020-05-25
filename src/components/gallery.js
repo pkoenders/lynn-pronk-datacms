@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import LightBox from "./lightbox"
+//import LightBox from "./lightbox"
 //import updateFilter from "./gallery-container"
 import Img from "gatsby-image"
 import blogStyles from "../pages/portfolio.module.scss"
@@ -9,10 +9,45 @@ import IconArrowRight from "../img/svg/icon-arrow-right.inline.svg"
 
 
 
+import SimpleReactLightbox from "simple-react-lightbox";
+import { SRLWrapper } from "simple-react-lightbox";
+
+
+
 //import GalleryFilter from "./gallery-filter"
 
 //const Gallery = (props) => {
 
+
+
+
+
+const lightBoxOptions = {
+  settings: {
+    overlayColor: "#0b1f35e8",
+    autoplaySpeed: 1500,
+    transitionSpeed: 900,
+    disablePanzoom: false,
+    hideControlsAfter: false,
+    slideAnimationType: "slide",
+    slideSpringValues: [300, 200],
+  },
+  buttons: {
+    backgroundColor: "#0b1f35e8",
+    iconColor: "#ffffff",
+    size: '42px',
+
+    showAutoplayButton: false,
+    showCloseButton: true,
+    showDownloadButton: false,
+    showFullscreenButton: false,
+  },
+  caption: {
+    showCaption: false,
+    captionColor: "#ffffff",
+
+  }
+};
 
 
 
@@ -84,60 +119,79 @@ function Gallery({ categoryFilter }) {
 
 
     <>
-      {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
-      <ol id="myBlogList" className={blogStyles.posts + " " + "grid"}>
-        {data.allDatoCmsPortfolio.edges.map((edge, i) => {
-          const images = data.allDatoCmsPortfolio.edges
-          const categoryItem = edge.node.category
 
-          if (
-            categoryItem.some(el => categoryFilter.includes(el))
-            ||
-            categoryFilter === "all"
-          ) {
-            return (
-              <li className={blogStyles.post + " " + "item"}>
-                {showLightbox && selectedImage !== null && (
-                  <LightBox
-                    images={images}
-                    handleClose={handleClose}
-                    handleNextRequest={handleNextRequest}
-                    handlePrevRequest={handlePrevRequest}
-                    selectedImage={selectedImage}
-                  />
-                )}
 
-                <div
-                  className={"item-content"}
-                  onClick={handleOpen(i)} key={i}
-                  data-sal="fade"
-                  data-sal-duration="300"
-                  data-sal-easing="ease"
-                >
-                  <Img
-                    fluid={edge.node.coverImage.fluid}
-                    alt={edge.node.coverImage.alt}
-                    src={edge.node.coverImage.url}
-                  ></Img>
+      <SimpleReactLightbox>
+        <SRLWrapper options={lightBoxOptions}>
+          {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
+          <ol id="myBlogList" className={blogStyles.posts + " " + "grid"}>
 
-                  <span className={"enlarge"}><IconEnlarge /></span>
 
-                  <Link
-                    to={`/gallery/${edge.node.slug}`}
-                    className={"item-content"}
-                  >
 
-                    <h2>
-                      {edge.node.title}
-                      <IconArrowRight />
-                    </h2>
-                  </Link>
-                </div>
-              </li>
-            )
-          }
-        })}
-      </ol>
+            {data.allDatoCmsPortfolio.edges.map((edge, i) => {
+              const images = data.allDatoCmsPortfolio.edges
+              const categoryItem = edge.node.category
+
+              if (
+                categoryItem.some(el => categoryFilter.includes(el))
+                ||
+                categoryFilter === "all"
+              ) {
+                return (
+
+
+                  <li className={blogStyles.post + " " + "item"}>
+
+
+
+                    <div
+                      className={"item-content"}
+                    >
+
+
+
+                      <Img
+                        fluid={edge.node.coverImage.fluid}
+                        alt={edge.node.coverImage.alt}
+                        src={edge.node.coverImage.url}
+                      >
+                        <Link
+                          to={`/gallery/${edge.node.slug}`}
+                          className={"item-content"}
+                        >
+                          {edge.node.title}
+                        </Link>
+
+
+                      </Img>
+
+
+
+
+                      <span className={"enlarge"}><IconEnlarge /></span>
+
+                      <Link
+                        to={`/gallery/${edge.node.slug}`}
+                        className={"item-content"}
+                      >
+
+                        <h2>
+                          {edge.node.title}
+                          <IconArrowRight />
+                        </h2>
+                      </Link>
+                    </div>
+                  </li>
+
+
+                )
+              }
+            })}
+
+
+          </ol>
+        </SRLWrapper>
+      </SimpleReactLightbox>
     </>
   )
 }
