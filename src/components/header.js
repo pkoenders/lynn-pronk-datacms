@@ -93,7 +93,7 @@ const Header = (props) => {
           <hr />
           <p>Please download my free ebook as a PDF file</p>
 
-          <Link to="mikkis-magic-day.pdf" title="Download my free ebook Mikkis magic day"  >
+          <Link to="../img/mikkis-magic-day.pdf" title="Download my free ebook Mikkis magic day"  >
             <div className={headerStyles.eBook}>
               <Img
                 alt={'Mikkis magic day'}
