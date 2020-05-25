@@ -36,7 +36,7 @@
   display: grid;
   padding: 30px;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   grid-auto-rows: 0px;
   list-style-type: none;
   margin: 0;
@@ -64,7 +64,7 @@
 
   span {
     position: absolute;
-    bottom: 60px;
+    bottom: 65px;
     right: 15px;
     opacity: 0.66;
 
@@ -85,14 +85,18 @@
 
     //background: rgb(37, 50, 64);
     //background: linear-gradient(180deg, rgba(37, 50, 64, 1) 0%, rgba(54, 74, 94, 1) 5%);
-    line-height: .9rem;
+    line-height: 1.1rem;
     font-weight: 600;
     margin: 0;
-    padding: 1rem 0.8rem;
+    padding: 0 0.8rem;
     font-size: .9rem;
     display: flex;
     border-top: 1px solid #253240;
     justify-content: space-between;
+
+    //justify-content: center;
+    align-items: center;
+
 
     transition:$hoverTransition;
 
@@ -101,7 +105,7 @@
       height: 30px;
 
       width: auto;
-      margin: -6px 0;
+      margin: 15px 0 15px 10px;
     }
   }
 

@@ -34,7 +34,7 @@ body {
 
   .SRLStage {
     @include respond-below(sm) {
-      top:50px !important;
+      //top:50px !important;
       button.SRLPrevButton, button.SRLNextButton {
         display: block;
         height: 42px;

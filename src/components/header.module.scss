@@ -36,7 +36,7 @@ header.headerOpen {
 
 
   @include respond-below(sm) {
-    z-index: 100001;
+    z-index: 100;
     width: 100%;
     bottom: 0;
     //height: auto;
