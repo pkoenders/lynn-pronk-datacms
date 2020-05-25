@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-//import LightBox from "./lightbox"
-//import updateFilter from "./gallery-container"
+
 import Img from "gatsby-image"
 import blogStyles from "../pages/portfolio.module.scss"
 import IconEnlarge from "../img/svg/icon-enlarge.inline.svg"
@@ -11,14 +10,6 @@ import IconArrowRight from "../img/svg/icon-arrow-right.inline.svg"
 
 import SimpleReactLightbox from "simple-react-lightbox";
 import { SRLWrapper } from "simple-react-lightbox";
-
-
-
-//import GalleryFilter from "./gallery-filter"
-
-//const Gallery = (props) => {
-
-
 
 
 
@@ -51,34 +42,7 @@ const lightBoxOptions = {
   }
 };
 
-
-
-
 function Gallery({ categoryFilter }) {
-
-
-
-
-
-
-
-  const [showLightbox, setShowLightbox] = useState(false)
-  const [selectedImage, setSelectedImage] = useState(null)
-
-  const handleOpen = i => e => {
-    setShowLightbox(true)
-    setSelectedImage(i)
-  }
-  const handleClose = () => {
-    setShowLightbox(false)
-    setSelectedImage(null)
-  }
-  const handlePrevRequest = (i, length) => e => {
-    setSelectedImage((i - 1 + length) % length)
-  }
-  const handleNextRequest = (i, length) => e => {
-    setSelectedImage((i + 1) % length)
-  }
 
   const data = useStaticQuery(graphql`
     query {
@@ -118,18 +82,11 @@ function Gallery({ categoryFilter }) {
   //console.log("current categoryFilter = " + categoryFilter)
 
   return (
-
-
     <>
-
-
       <SimpleReactLightbox>
         <SRLWrapper options={lightBoxOptions}>
           {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
           <ol id="myBlogList" className={blogStyles.posts + " " + "grid"}>
-
-
-
             {data.allDatoCmsPortfolio.edges.map((edge, i) => {
               const images = data.allDatoCmsPortfolio.edges
               const categoryItem = edge.node.category
@@ -143,32 +100,17 @@ function Gallery({ categoryFilter }) {
 
 
                   <li className={blogStyles.post + " " + "item"}>
-
-
-
                     <div
                       className={"item-content"}
                     >
-
-
-
                       <Img
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
                         src={edge.node.coverImage.url}
+                      // href={`/gallery/${edge.node.slug}`}
                       >
-                        <Link
-                          to={`/gallery/${edge.node.slug}`}
-                          className={"item-content"}
-                        >
-                          {edge.node.title}
-                        </Link>
-
 
                       </Img>
-
-
-
 
                       <span className={"enlarge"}><IconEnlarge /></span>
 
@@ -185,11 +127,9 @@ function Gallery({ categoryFilter }) {
                     </div>
                   </li>
 
-
                 )
               }
             })}
-
 
           </ol>
         </SRLWrapper>
