@@ -92,13 +92,16 @@ const Header = (props) => {
 
           <hr />
           <p>Please download my free ebook as a PDF file</p>
-          <div className={headerStyles.eBook}>
-            <Img
-              alt={'Mikkis magic day'}
-              fluid={data.mikkisPDF.childImageSharp.fluid}
-            />
-            <p>Mikki’s magic day</p>
-          </div>
+
+          <Link to="mikkis-magic-day.pdf" title="Download my free ebook Mikkis magic day"  >
+            <div className={headerStyles.eBook}>
+              <Img
+                alt={'Mikkis magic day'}
+                fluid={data.mikkisPDF.childImageSharp.fluid}
+              />
+              <p>Mikki’s magic day</p>
+            </div>
+          </Link>
           <hr />
         </div>
       </header>

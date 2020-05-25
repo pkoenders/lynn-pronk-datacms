@@ -25,6 +25,7 @@
   width: 100%;
   color: #ffffff;
   font-size: 0.9rem;
+  line-height: 1.6rem;
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -32,6 +33,9 @@
   padding: 0.5rem 0.7rem;
   margin: 0;
   width: 100%;
+
+  border: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-item:hover {
@@ -42,7 +46,7 @@
 .nav-item:after {
   display: block;
   //padding: 0 2.5rem;
-  margin: 0 auto -3px;
+  margin: 0 auto 0px;
 
   //padding: 0.2rem 2.2rem;
 
