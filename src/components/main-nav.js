@@ -27,6 +27,7 @@ const MainNav = ({ location }) => {
             to="/"
           >
             My gallery
+
           </Link>
         </li>
 

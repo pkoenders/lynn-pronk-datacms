@@ -24,27 +24,29 @@ import { SRLWrapper } from "simple-react-lightbox";
 
 const lightBoxOptions = {
   settings: {
-    overlayColor: "#0b1f35e8",
-    autoplaySpeed: 1500,
-    transitionSpeed: 900,
+    overlayColor: '#0b1f35e8',
+    // autoplaySpeed: 1500,
+    //transitionSpeed: 900,
     disablePanzoom: false,
     hideControlsAfter: false,
-    slideAnimationType: "slide",
+    slideAnimationType: 'slide',
     slideSpringValues: [300, 200],
+    slideTransitionTimingFunction: 'easeIn',
   },
   buttons: {
-    backgroundColor: "#0b1f35e8",
-    iconColor: "#ffffff",
+    backgroundColor: '#0b1f35e8',
+    iconColor: '#ffffff',
     size: '42px',
 
     showAutoplayButton: false,
     showCloseButton: true,
     showDownloadButton: false,
     showFullscreenButton: false,
+
   },
   caption: {
     showCaption: false,
-    captionColor: "#ffffff",
+    captionColor: '#ffffff',
 
   }
 };

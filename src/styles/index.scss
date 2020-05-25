@@ -22,63 +22,28 @@ body {
 
 #SRLLightbox {
   z-index: 10000;
-  
-  //background: $headerBgColor !important;
 }
-
-.SlbPortfolio {
-  //width: 100%;
-  //height: fit-content;
-  //height: 100vh;
-  > img {
-    //display: none;
-  }
-  picture {
-    //display: none;
-  }
-}
+ 
 #SRLLightbox {
+
 
   @include respond-below(sm) {
     top:50px !important;
+    bottom:0px !important
   }
 
-  
   .SRLStage {
-    z-index: 10000;
-    left: 300px;
-    right: 0px;
     @include respond-below(sm) {
-      left: 0px;
-      right: 0px;
       top:50px !important;
-      
-
-
       button.SRLPrevButton, button.SRLNextButton {
         display: block;
         height: 42px;
         width: 42px;
       }
     }
-    //padding: 15px;
-    width: auto;
-
-    // .SRLControls.css-ycfl2y {
-    //   top: calc(env(safe-area-inset-top) + 15px);
-    //   right: calc(env(safe-area-inset-right) + 15px);
-    // }
-    // .SRLNextButton.css-1f7wur {
-    //   right: calc(env(safe-area-inset-right) + 15px);
-    // }
-    // .SRLPrevButton.css-1pft9sy {
-    //   left: calc(env(safe-area-inset-right) + 15px);
-    // }
   }
 
   .SRLElementContainer {
-    // width: 100vw;
-    // height: 100vh;
     z-index: 10;
   }
 }
