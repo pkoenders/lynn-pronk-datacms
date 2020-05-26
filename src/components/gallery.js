@@ -16,8 +16,6 @@ import { SRLWrapper } from "simple-react-lightbox";
 const lightBoxOptions = {
   settings: {
     overlayColor: '#0b1f35e8',
-    // autoplaySpeed: 1500,
-    //transitionSpeed: 900,
     disablePanzoom: false,
     hideControlsAfter: false,
     slideAnimationType: 'slide',

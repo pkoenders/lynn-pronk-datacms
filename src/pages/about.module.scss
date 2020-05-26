@@ -4,7 +4,7 @@
 .aboutWrapper {
   display: block;
   max-width: 800px;
-  margin: 15px auto 0;
+  margin: 15px auto 60px;
 
   h2 {
     text-align: center;
@@ -46,7 +46,8 @@
     .testimonial {
       overflow: hidden;
       position: relative;
-      background-color: #ffffff;
+      background-color: #f6f4f2;
+      color: #3d4f61;
       padding: 30px 60px 30px;
       @include respond-below(sm) {
         padding-left: 30px;
@@ -55,7 +56,7 @@
         margin-right: 15px;
       }
       margin-bottom: 30px;
-      border-radius: 5px;
+      border-radius: 15px;
       width: fit-content;
       height: fit-content;
       display: inline-block;
@@ -69,7 +70,7 @@
       }
 
      .testimonialImgWrapper {
-       border-radius: 3px;
+       border-radius: 10px;
        overflow: hidden;
        width: 130px;
       display: block;
@@ -145,6 +146,6 @@
   }
   .testimonialContent {
     background-color: transparent;
-    padding: 0 0 1.5rem;
+    padding: 0 0 0;
   }
 }

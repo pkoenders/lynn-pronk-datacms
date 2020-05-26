@@ -57,7 +57,6 @@ const Header = (props) => {
   `)
 
   return (
-
     <>
       <button className="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
         <span class="hamburger-box">

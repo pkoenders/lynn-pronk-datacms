@@ -16,7 +16,8 @@ const Footer = () => {
 
   return (
     <footer className={footerStyles.footer}>
-      <p>© {new Date().getFullYear()} - Design &amp; build by {data.site.siteMetadata.author} - Freelance UI Web Designer</p>
+      <p>© {new Date().getFullYear()} - Lynn Pronk Portraits</p>
+      <p>Design &amp; build by {data.site.siteMetadata.author}<br />Freelance UI &amp; Web Designer<br />Accessible &amp; Fast</p>
     </footer>
   )
 }

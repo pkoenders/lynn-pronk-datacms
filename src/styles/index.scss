@@ -28,14 +28,17 @@ body {
 
 
   @include respond-below(sm) {
-    top:50px !important;
+    //top:50px !important;
     bottom:0px !important
   }
 
   .SRLStage {
     @include respond-below(sm) {
       //top:50px !important;
-      button.SRLPrevButton, button.SRLNextButton {
+      button.SRLPrevButton, 
+      button.SRLNextButton, 
+      button.SRLCloseButton,
+      button.SRLZoomOutButton{
         display: block;
         height: 42px;
         width: 42px;
