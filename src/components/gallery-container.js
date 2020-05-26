@@ -74,7 +74,7 @@ const updateFilter = (filterName) => {
 
   if (!categoryFilter.includes(filterName)) {
     categoryFilter = categoryFilter + filterName + ","
-    console.log("categoryFilter New! ===" + categoryFilter)
+    // console.log("categoryFilter New! ===" + categoryFilter)
     //layoutFilteredState = "new"
     //console.log("layoutFilteredState === " + layoutFilteredState)
     layoutFilteredGallery = (
