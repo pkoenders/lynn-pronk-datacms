@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { } from "react"
 import Gallery from "./gallery"
 import GalleryFilter from "./gallery-filter"
 import sal from 'sal.js'
@@ -10,7 +10,6 @@ import sal from 'sal.js'
 //const GalleryContainer = (props) => {
 let categoryFilter = "homepage"
 let categoryFilterTxt = "all"
-let layoutFilteredState = null
 let layoutFilteredGallery
 
 
@@ -85,8 +84,7 @@ const updateFilter = (filterName) => {
         <Gallery categoryFilter={categoryFilter} />
       </>
     )
-  } else if (categoryFilter = categoryFilter.replace(filterName + ",", "")) {
-    //layoutFilteredState = "default"
+  } else if (categoryFilter = categoryFilter.replace(filterName + ',', '')) {
     layoutFilteredGallery = (
       <>
         <Gallery categoryFilter={categoryFilter} />
@@ -135,10 +133,9 @@ class GalleryContainer extends React.Component {
     const filterClick = this.state.filterClick;
 
     if (filterClick) {
-      layoutFilteredGallery = layoutFilteredGallery
+      //layoutFilteredGallery = layoutFilteredGallery
     } else {
       categoryFilter = "homepage"
-
       //categoryFilter = "all"
       layoutFilteredGallery = (
         <>

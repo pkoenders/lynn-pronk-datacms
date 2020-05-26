@@ -1,20 +1,10 @@
-import React, { useState } from "react"
-import blogStyles from "../pages/portfolio.module.scss"
+import React, { } from "react"
+import blogStyles from '../pages/portfolio.module.scss'
 
 function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
-  const [active, setActive] = useState()
-
-
-
-
   function clickFilter(e) {
-    //console.log("e.target.name === " + e.target.name)
-
-
-
     let thisFilter = e.target.id
     updateFilterClick(thisFilter)
-    //setActive(prevState => !prevState)
   }
 
   return (
@@ -25,8 +15,7 @@ function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
           type="button"
           name="Child Portraits"
           id='child'
-          class="buttonSecondary filterGalleryBtn"
-          className={'buttonSecondary' + ' ' + 'filterGalleryBtn'}
+          className={'buttonSecondary' + ' filterGalleryBtn'}
           onClick={clickFilter}
         >
           Child Portraits
@@ -37,12 +26,8 @@ function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
           type="button"
           name="Adult Portraits"
           id='adult'
-          class="buttonSecondary filterGalleryBtn"
-          className={'buttonSecondary' + ' ' + 'filterGalleryBtn'}
-          //className={'buttonSecondary' + ' ' + 'filterGalleryBtn' + (active ? ' isActive' : '')}
+          className={'buttonSecondary' + ' filterGalleryBtn'}
           onClick={clickFilter}
-        //onClick={handleToggle}
-
         >
           Adult Portraits
         </button>

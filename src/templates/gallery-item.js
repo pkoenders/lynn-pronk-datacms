@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import blogStyles from '../pages/portfolio.module.scss'
 import Img from 'gatsby-image'
-import DimensionsIcon from "../img/svg/dimensions.inline.svg"
+import DimensionsIcon from '../img/svg/dimensions.inline.svg'
 
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
@@ -47,7 +47,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
         </div>
 
         <div className={blogStyles.portfolioPage}>
-          <Img className={blogStyles.coverImage + ' ' + 'mediumZoomImage' + ' ' + 'test'}
+          <Img className={blogStyles.coverImage + ' mediumZoomImage'}
             fluid={data.datoCmsPortfolio.coverImage.fluid}
             alt={data.datoCmsPortfolio.coverImage.alt}
             src={data.datoCmsPortfolio.coverImage.url}
@@ -59,8 +59,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             </div>
             <DimensionsIcon />
             <div>
-              <p><span>W</span><span>{data.datoCmsPortfolio.artworkWidth + " cm"}</span></p>
-              <p><span>H</span><span>{data.datoCmsPortfolio.artworkHeight + " cm"}</span></p>
+              <p><span>W</span><span>{data.datoCmsPortfolio.artworkWidth + ' cm'}</span></p>
+              <p><span>H</span><span>{data.datoCmsPortfolio.artworkHeight + ' cm'}</span></p>
             </div>
 
           </div>

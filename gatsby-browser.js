@@ -1,7 +1,3 @@
-//import Layout from "./src/components/gallery"
-//import React, { Gallery } from "react"
-import Gallery from "./src/components/gallery"
-
 // mediumZoom
 import mediumZoom from "medium-zoom"
 

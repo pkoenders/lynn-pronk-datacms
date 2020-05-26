@@ -6,29 +6,6 @@ import "../styles/hamburger.scss"
 import headerStyles from "./header.module.scss"
 import Signature from "../img/svg/signature.inline.svg"
 
-
-
-// export const fluidImage = graphql`
-// fragment fluidImage on File {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
-// `;
-
-
-// export const componentImages = graphql`
-//   query {
-//     image1: file(relativePath: { eq: "../img/mikkis-magic-day.jpg" }) {
-//       ...fluidImage
-//     }
-//   }
-// `;
-
-
-
 const Header = (props) => {
   const data = useStaticQuery(graphql`
     query MyQuery {
@@ -90,8 +67,8 @@ const Header = (props) => {
           <MainNav />
 
           <hr />
-          <p>Please download my free ebook as a PDF file</p>
 
+          <p>Please download my free ebook as a PDF file</p>
           <Link to="mikkis-magic-day.pdf" title="Download my free ebook - 'Mikkis magic day'"  >
             <div className={headerStyles.eBook}>
               <Img

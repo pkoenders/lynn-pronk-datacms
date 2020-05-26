@@ -3,11 +3,8 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 import aboutStyles from '../pages/about.module.scss'
 
-
 const Testimonial = () => {
-
     let linkToItem
-
     const data = useStaticQuery(graphql`
     query {
       allDatoCmsTestimonial(sort: { fields: [position], order: ASC }) {
@@ -41,9 +38,7 @@ const Testimonial = () => {
     return (
         <>
             {data.allDatoCmsTestimonial.edges.map((edge, i) => {
-
                 linkToItem = edge.node.linkToGalleryItem
-
 
                 if (linkToItem === null) {
                     return (
@@ -93,7 +88,6 @@ const Testimonial = () => {
 
                         </div>
                     )
-
                 }
 
             })}

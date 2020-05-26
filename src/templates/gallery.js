@@ -1,11 +1,9 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import blogStyles from '../pages/portfolio.module.scss'
 import Layout from '../components/layout'
-import Head from '../components/head'
-import Header from "../components/header"
-import PortfolioPageItem from "./gallery-item"
+import Header from '../components/header'
+import PortfolioPageItem from './gallery-item'
 
 export const query = graphql`
   query($slug: String!) {
@@ -52,5 +50,4 @@ const PortfolioPage = ({ data, pageContext }) => {
     </>
   )
 }
-
 export default PortfolioPage

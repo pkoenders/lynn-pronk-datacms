@@ -1,15 +1,11 @@
-import React, { useState } from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
-
-import Img from "gatsby-image"
-import blogStyles from "../pages/portfolio.module.scss"
-import IconEnlarge from "../img/svg/icon-enlarge.inline.svg"
-import IconArrowRight from "../img/svg/icon-arrow-right.inline.svg"
-
-
-
-import SimpleReactLightbox from "simple-react-lightbox";
-import { SRLWrapper } from "simple-react-lightbox";
+import React, { } from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import blogStyles from '../pages/portfolio.module.scss'
+import IconEnlarge from '../img/svg/icon-enlarge.inline.svg'
+import IconArrowRight from '../img/svg/icon-arrow-right.inline.svg'
+import SimpleReactLightbox from 'simple-react-lightbox'
+import { SRLWrapper } from 'simple-react-lightbox'
 
 
 
@@ -84,9 +80,9 @@ function Gallery({ categoryFilter }) {
       <SimpleReactLightbox>
         <SRLWrapper options={lightBoxOptions}>
           {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
-          <ol id="myBlogList" className={blogStyles.posts + " " + "grid"}>
+          <ol id="myBlogList" className={blogStyles.posts + " grid"}>
             {data.allDatoCmsPortfolio.edges.map((edge, i) => {
-              const images = data.allDatoCmsPortfolio.edges
+              //console.log(edge, i)
               const categoryItem = edge.node.category
 
               if (
@@ -95,9 +91,7 @@ function Gallery({ categoryFilter }) {
                 categoryFilter === "all"
               ) {
                 return (
-
-
-                  <li className={blogStyles.post + " " + "item"}>
+                  <li className={blogStyles.post + " item"}>
                     <div
                       className={"item-content"}
                     >
@@ -105,10 +99,7 @@ function Gallery({ categoryFilter }) {
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
                         src={edge.node.coverImage.url}
-                      // href={`/gallery/${edge.node.slug}`}
-                      >
-
-                      </Img>
+                      ></Img>
 
                       <span className={"enlarge"}><IconEnlarge /></span>
 

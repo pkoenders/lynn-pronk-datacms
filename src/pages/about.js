@@ -1,9 +1,7 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import IndexBGroundImg from '../components/index-bground-img'
 import Layout from '../components/layout'
-
 import Head from '../components/head'
 import Header from "../components/header"
 import aboutStyles from './about.module.scss';

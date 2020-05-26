@@ -1,13 +1,11 @@
-import React, { useState } from "react"
+import React, { } from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Header from "../components/header"
 import Helmet from "react-helmet"
 import GalleryContainer from "../components/gallery-container"
 
-const BlogPage = props => {
-  const categoryFilter = "homepage"
-
+const HomePage = props => {
   return (
     <div>
       <Helmet
@@ -32,15 +30,14 @@ const BlogPage = props => {
           href="https://www.datocms-assets.com/"
         ></link>
 
-        <link
+        {/* <link
           rel="preload"
           href="https://www.datocms-assets.com/26318/"
-        ></link>
+        ></link> */}
 
 
       </Helmet>
       <Head title="Home" />
-      {/* <IndexBGroundImg /> */}
       <Header />
       <Layout>
         <GalleryContainer />
@@ -48,7 +45,4 @@ const BlogPage = props => {
     </div>
   )
 }
-
-export default BlogPage
-
-// ffff
+export default HomePage
