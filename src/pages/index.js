@@ -27,7 +27,7 @@ const HomePage = props => {
 
         <link
           rel="preconnect"
-          href="https://www.datocms-assets.com/"
+          href="https://www.datocms-assets.com/26318/"
         ></link>
 
         {/* <link
