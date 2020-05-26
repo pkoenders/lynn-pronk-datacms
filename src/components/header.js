@@ -48,6 +48,7 @@ const Header = (props) => {
           <Link to="/" title="Home" >
             <div className={headerStyles.avatar}>
               <Img
+                width='100%'
                 alt={'Lynn Pronk'}
                 fluid={data.file.childImageSharp.fluid}
               />
@@ -72,6 +73,7 @@ const Header = (props) => {
           <a href="/mikkis-magic-day.pdf" title="Download my free ebook - 'Mikkis magic day'" target="_blank">
             <div className={headerStyles.eBook}>
               <Img
+                width='100%'
                 alt={'Mikkis magic day'}
                 fluid={data.mikkisPDF.childImageSharp.fluid}
               />
