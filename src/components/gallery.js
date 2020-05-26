@@ -8,7 +8,6 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 import { SRLWrapper } from 'simple-react-lightbox'
 
 
-
 const lightBoxOptions = {
   settings: {
     overlayColor: '#0b1f35e8',
@@ -91,7 +90,10 @@ function Gallery({ categoryFilter }) {
                 categoryFilter === "all"
               ) {
                 return (
-                  <li className={blogStyles.post + " item"}>
+                  <li className={blogStyles.post + " item"}
+                    data-sal="fade"
+                    data-sal-duration="300"
+                    data-sal-easing="ease">
                     <div
                       className={"item-content"}
                     >
