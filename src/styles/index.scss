@@ -206,14 +206,18 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color:$primaryColor;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  color:$primaryColor;
+  text-decoration: underline;
 }
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
+  color:$primaryColor;
   text-decoration: underline dotted;
 }
 b,
