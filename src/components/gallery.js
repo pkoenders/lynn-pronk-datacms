@@ -59,7 +59,7 @@ function Gallery({ categoryFilter }) {
               alt
 
               fluid(
-                maxWidth: 345
+                maxWidth: 388
                 imgixParams: { fm: "jpg", auto: "compress" }
               ) {
                 ...GatsbyDatoCmsFluid
