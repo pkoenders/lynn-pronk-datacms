@@ -6,7 +6,6 @@ import sal from 'sal.js'
 
 
 
-
 //const GalleryContainer = (props) => {
 let categoryFilter = "homepage"
 let categoryFilterTxt = "all"
