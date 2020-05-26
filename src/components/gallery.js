@@ -100,6 +100,7 @@ function Gallery({ categoryFilter }) {
                       className={"item-content"}
                     >
                       <Img
+                        width='100%'
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
                         src={edge.node.coverImage.url}
