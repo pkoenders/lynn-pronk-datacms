@@ -59,6 +59,7 @@ const Header = (props) => {
           <Link to="/" title="Home"  >
             <div className={headerStyles.avatar + ' ' + headerStyles.avatarMobile}>
               <Img
+                width='100%'
                 alt={'Lynn Pronk'}
                 fluid={data.file.childImageSharp.fluid}
               />
