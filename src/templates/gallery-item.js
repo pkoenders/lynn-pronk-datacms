@@ -15,7 +15,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
         <div className={blogStyles.portfolioNav}>
           {previous &&
             <Link
-              to={'gallery/' + previous.slug} className={blogStyles.previous}
+              to={`/gallery/${previous.slug}`} className={blogStyles.previous}
             >
               <div>
                 <img
@@ -31,7 +31,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
 
           {next &&
             <Link
-              to={'gallery/' + next.slug} className={blogStyles.next}
+              to={`/gallery/${next.slug}`} className={blogStyles.next}
             >
               <div>
                 <img
@@ -46,12 +46,14 @@ const PortfolioPageItem = ({ data, pageContext }) => {
           }
         </div>
 
-        <div className={blogStyles.portfolioPage}>
-          <Img className={blogStyles.coverImage + ' mediumZoomImage'}
+        <div className={blogStyles.portfolioPage + ' mediumZoomImage'}>
+          <Img className={blogStyles.coverImage}
             fluid={data.datoCmsPortfolio.coverImage.fluid}
             alt={data.datoCmsPortfolio.coverImage.alt}
             src={data.datoCmsPortfolio.coverImage.url}
-          />
+          ></Img>
+
+
 
           <div className={blogStyles.itemSizing}>
             <div>

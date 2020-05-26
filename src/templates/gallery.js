@@ -16,8 +16,12 @@ export const query = graphql`
         url
         title
         alt
-        fluid(maxWidth: 800, imgixParams: { fm: "jpg", auto: "compress" }) {
-          ...GatsbyDatoCmsFluid_noBase64
+       
+        fluid(
+          maxWidth: 800
+          imgixParams: { fm: "jpg", auto: "compress" }
+        ) {
+          ...GatsbyDatoCmsFluid
         }
         
       }

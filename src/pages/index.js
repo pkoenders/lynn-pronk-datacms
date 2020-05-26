@@ -30,12 +30,6 @@ const HomePage = props => {
           href="https://www.datocms-assets.com/26318/"
         ></link>
 
-        {/* <link
-          rel="preload"
-          href="https://www.datocms-assets.com/26318/"
-        ></link> */}
-
-
       </Helmet>
       <Head title="Home" />
       <Header />

@@ -36,10 +36,10 @@ const Header = (props) => {
   return (
     <>
       <button className="hamburger hamburger--squeeze" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
         </span>
-        <span class="hamburger-label">Menu</span>
+        <span className="hamburger-label">Menu</span>
       </button>
 
       <header id="myHeader" className={headerStyles.header + ' ' + headerStyles.aside}>

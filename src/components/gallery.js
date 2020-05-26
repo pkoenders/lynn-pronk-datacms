@@ -90,7 +90,9 @@ function Gallery({ categoryFilter }) {
                 categoryFilter === "all"
               ) {
                 return (
-                  <li className={blogStyles.post + " item"}
+                  <li
+                    className={blogStyles.post + " item"}
+                    key={i}
                     data-sal="fade"
                     data-sal-duration="300"
                     data-sal-easing="ease">
