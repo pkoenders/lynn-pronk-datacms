@@ -69,7 +69,7 @@ const Header = (props) => {
           <hr />
 
           <p>Please download my free ebook as a PDF file</p>
-          <Link to="mikkis-magic-day.pdf" title="Download my free ebook - 'Mikkis magic day'"  >
+          <a href="mikkis-magic-day.pdf" title="Download my free ebook - 'Mikkis magic day'"  >
             <div className={headerStyles.eBook}>
               <Img
                 alt={'Mikkis magic day'}
@@ -77,7 +77,7 @@ const Header = (props) => {
               />
               <p>Mikki’s magic day</p>
             </div>
-          </Link>
+          </a>
           <hr />
         </div>
       </header>
