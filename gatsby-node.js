@@ -13,8 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
                 title
                 dateYear
-                coverImage
-                {
+                coverImage {
                   url
                   alt
                  
@@ -34,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
               coverImage {
                 url
                 alt
+
               }
             }
           }
