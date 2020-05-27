@@ -228,12 +228,12 @@ a {
 a:active,
 a:hover {
   outline-width: 0;
-  color:$primaryColor;
+  color:$primaryColorA;
   text-decoration: underline;
 }
 abbr[title] {
   border-bottom: none;
-  color:$primaryColor;
+  color:$primaryColorA;
   text-decoration: underline dotted;
 }
 b,

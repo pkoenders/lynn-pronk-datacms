@@ -21,8 +21,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 <img
                   alt={previous.coverImage.alt}
                   src={previous.coverImage.url}
-                  width={'80px'}
-                  height={'auto'}
+                  width='80px'
+                  height='auto'
                 />
               </div>
               <span>Previous</span>
@@ -37,8 +37,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 <img
                   alt={next.coverImage.alt}
                   src={next.coverImage.url}
-                  width={'80px'}
-                  height={'auto'}
+                  width='80px'
+                  height='auto'
                 />
               </div>
               <span>Next</span>
@@ -48,6 +48,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
 
         <div className={blogStyles.portfolioPage + ' mediumZoomImage'}>
           <Img className={blogStyles.coverImage}
+            width='100%'
             fluid={data.datoCmsPortfolio.coverImage.fluid}
             alt={data.datoCmsPortfolio.coverImage.alt}
             src={data.datoCmsPortfolio.coverImage.url}
