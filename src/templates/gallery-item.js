@@ -19,6 +19,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             >
               <div>
                 <img
+                  //fluid={previous.coverImage.fluid}
                   alt={previous.coverImage.alt}
                   src={previous.coverImage.url}
                   width='80px'

@@ -44,10 +44,27 @@ function Gallery({ categoryFilter }) {
           next {
             slug
             title
+            coverImage {
+              fluid(
+                maxWidth: 80
+                imgixParams: { fm: "jpg", auto: "compress" }
+              ) {
+                ...GatsbyDatoCmsFluid
+              }
+            }
+
           }
           previous {
             slug
             title
+            coverImage {
+              fluid(
+                maxWidth: 80
+                imgixParams: { fm: "jpg", auto: "compress" }
+              ) {
+                ...GatsbyDatoCmsFluid
+              }
+            }
           }
           node {
             dateYear
