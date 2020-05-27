@@ -15,6 +15,16 @@ module.exports = {
   plugins: [
 
 
+
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Spectral:400,700', 'Roboto:400,700', 'Roboto Slab:400,700']
+    //     }
+    //   }
+    // },
+
     {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
