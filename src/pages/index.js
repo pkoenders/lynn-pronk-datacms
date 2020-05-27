@@ -7,9 +7,8 @@ import GalleryContainer from "../components/gallery-container"
 
 const HomePage = props => {
   return (
-    <div>
+    <>
       <Helmet
-        title="Lynn Pronk Portfolio"
         meta={[
           {
             rel: "preconnect",
@@ -29,14 +28,15 @@ const HomePage = props => {
           rel="preconnect"
           href="https://www.datocms-assets.com/26318/"
         ></link>
-
       </Helmet>
-      <Head title="Home" />
+      <Head title="My gallery" />
+
+
       <Header />
       <Layout>
         <GalleryContainer />
       </Layout>
-    </div>
+    </>
   )
 }
 export default HomePage

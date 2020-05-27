@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Helmet from "react-helmet"
+import Head from '../components/head'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import Head from '../components/head'
 import Header from "../components/header"
 import aboutStyles from './about.module.scss';
 
@@ -54,11 +55,33 @@ const AboutPage = (props) => {
 
 
   return (
-    <div>
-      {/* <IndexBGroundImg /> */}
+    <>
+      <Helmet
+        meta={[
+          {
+            rel: "preconnect",
+            href: "https://lynn-pronk-datocms.netlify.app/",
+          },
+          { name: "description", content: "Sample" },
+          { name: "keywords", content: "sample, something" },
+        ]}
+      >
+        <html lang="en" />
+        <link
+          rel="preconnect"
+          href="https://lynn-pronk-datocms.netlify.app/"
+        ></link>
+
+        <link
+          rel="preconnect"
+          href="https://www.datocms-assets.com/26318/"
+        ></link>
+      </Helmet>
+      <Head title="Home" />
+
       <Header />
       <Layout>
-        <Head title="About Lynn Pronk" />
+        <Head title="About me" />
 
 
         <div className={aboutStyles.aboutWrapper}>
@@ -77,7 +100,7 @@ const AboutPage = (props) => {
           </div>
         </div>
       </Layout >
-    </div >
+    </ >
   )
 }
 

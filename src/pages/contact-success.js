@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout'
+import Helmet from 'react-helmet'
 import Head from '../components/head'
 import Header from '../components/header'
 import contactStyles from './contact.module.scss'
@@ -7,10 +8,31 @@ import LikeIcon from '../img/svg/like.inline.svg'
 
 const ContactPage = () => {
   return (
-    <div>
+    <>
+      <Helmet
+        meta={[
+          {
+            rel: "preconnect",
+            href: "https://lynn-pronk-datocms.netlify.app/",
+          },
+          { name: "description", content: "Sample" },
+          { name: "keywords", content: "sample, something" },
+        ]}
+      >
+        <html lang="en" />
+        <link
+          rel="preconnect"
+          href="https://lynn-pronk-datocms.netlify.app/"
+        ></link>
+
+        <link
+          rel="preconnect"
+          href="https://www.datocms-assets.com/26318/"
+        ></link>
+      </Helmet>
+      <Head title="Contact success" />
       <Header />
       <Layout>
-        <Head title="Contact" />
         <div className={contactStyles.contactForm}>
           <div className={contactStyles.contactFormWrapper + ' ' + contactStyles.contactFormSucess}>
             <h2>Thank you</h2>
@@ -19,7 +41,7 @@ const ContactPage = () => {
           </div>
         </div>
       </Layout>
-    </div >
+    </ >
   );
 };
 export default ContactPage;

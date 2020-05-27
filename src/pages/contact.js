@@ -1,16 +1,38 @@
-import React from 'react';
+import React from 'react'
 import Layout from '../components/layout'
+import Helmet from 'react-helmet'
 import Head from '../components/head'
 import Header from "../components/header"
-import contactStyles from './contact.module.scss';
+import contactStyles from './contact.module.scss'
 
 const ContactPage = () => {
   return (
-    <div>
+    <>
+      <Helmet
+        meta={[
+          {
+            rel: "preconnect",
+            href: "https://lynn-pronk-datocms.netlify.app/",
+          },
+          { name: "description", content: "Sample" },
+          { name: "keywords", content: "sample, something" },
+        ]}
+      >
+        <html lang="en" />
+        <link
+          rel="preconnect"
+          href="https://lynn-pronk-datocms.netlify.app/"
+        ></link>
+
+        <link
+          rel="preconnect"
+          href="https://www.datocms-assets.com/26318/"
+        ></link>
+      </Helmet>
+      <Head title="Contact me" />
+
       <Header />
       <Layout>
-        <Head title="Contact" />
-
         <div className={contactStyles.contactForm}>
 
         </div>
@@ -67,7 +89,7 @@ I will always reply.</p>
           </div>
         </div>
       </Layout >
-    </div>
+    </>
   );
 };
 

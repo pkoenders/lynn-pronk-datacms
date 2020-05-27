@@ -13,6 +13,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
   console.log('previous.coverImage.fixed.src = ' + previousImgSrc)
   return (
     <>
+
+
       <div className={blogStyles.portfolioPageWrapper}>
         <h2>{data.datoCmsPortfolio.title}</h2>
 
