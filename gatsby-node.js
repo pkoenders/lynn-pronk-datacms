@@ -14,15 +14,19 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 dateYear
                 coverImage {
+                
                   url
                   alt
-                 
                 }
-            }
+              }
             next {
               slug
               title
               coverImage {
+                fixed(width: 90, imgixParams: { fm: "jpg", auto: "compress" }) {
+                  src
+                }
+                
                 url
                 alt
               }
@@ -31,16 +35,18 @@ exports.createPages = ({ graphql, actions }) => {
               slug
               title
               coverImage {
+                fixed(width: 90, imgixParams: { fm: "jpg", auto: "compress" }) {
+                  src
+                }
                 url
-                alt
-
+                alt                
               }
             }
           }
         }
       }
       `).then(results => {
-      // console.log(results)
+      console.log(results)
       if (results.error) {
         reject(results.error)
       }
@@ -49,6 +55,11 @@ exports.createPages = ({ graphql, actions }) => {
       portfolioItems.forEach((portfolioItem, index) => {
         const next = index === portfolioItems.length - 1 ? null : portfolioItems[index + 1].node
         const previous = index === 0 ? null : portfolioItems[index - 1].node
+
+
+
+
+
         const thisPortfolioItem = portfolioItem
 
         createPage({
@@ -58,8 +69,13 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: portfolioItem.node.slug,
             pathItem: thisPortfolioItem,
+
             previous,
-            next
+            next,
+
+            // nextImgSrc: next.coverImage.url,
+            //previousImgSrc: previous.coverImage.fixed.src
+
             // prev: index === 0 ? null : work[index - 1].node,
             // next: index === (work.length - 1) ? null : work[index + 1].node,
           },

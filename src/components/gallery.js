@@ -45,27 +45,27 @@ function Gallery({ categoryFilter }) {
             slug
             title
             coverImage {
-              fluid(
-                maxWidth: 80
-                imgixParams: { fm: "jpg", auto: "compress" }
-              ) {
-                ...GatsbyDatoCmsFluid
+              fixed(width: 90, imgixParams: { fm: "jpg", auto: "compress" }) {
+                ...GatsbyDatoCmsFixed
               }
+              url
+              alt                
             }
 
           }
+
           previous {
             slug
             title
             coverImage {
-              fluid(
-                maxWidth: 80
-                imgixParams: { fm: "jpg", auto: "compress" }
-              ) {
-                ...GatsbyDatoCmsFluid
+              fixed(width: 90, imgixParams: { fm: "jpg", auto: "compress" }) {
+                ...GatsbyDatoCmsFixed
               }
+              url
+              alt                
             }
           }
+
           node {
             dateYear
             title
@@ -76,7 +76,7 @@ function Gallery({ categoryFilter }) {
               alt
 
               fluid(
-                maxWidth: 388
+                maxWidth: 388,
                 imgixParams: { fm: "jpg", auto: "compress" }
               ) {
                 ...GatsbyDatoCmsFluid

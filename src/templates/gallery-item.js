@@ -6,7 +6,11 @@ import DimensionsIcon from '../img/svg/dimensions.inline.svg'
 
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
-  const { next, previous } = pageContext
+  const { next, previous, nextImgSrc, previousImgSrc } = pageContext
+
+
+
+  console.log('previous.coverImage.fixed.src = ' + previousImgSrc)
   return (
     <>
       <div className={blogStyles.portfolioPageWrapper}>
@@ -19,10 +23,9 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             >
               <div>
                 <img
-                  //fluid={previous.coverImage.fluid}
                   alt={previous.coverImage.alt}
-                  src={previous.coverImage.url}
-                  width='80px'
+                  src={previous.coverImage.url + '?auto=format&w=80'}
+                  width='90px'
                   height='auto'
                 />
               </div>
@@ -37,8 +40,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
               <div>
                 <img
                   alt={next.coverImage.alt}
-                  src={next.coverImage.url}
-                  width='80px'
+                  src={next.coverImage.url + '?auto=format&w=80'}
+                  width='90px'
                   height='auto'
                 />
               </div>
