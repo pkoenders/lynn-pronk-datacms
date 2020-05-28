@@ -47,7 +47,7 @@ const ContactPage = () => {
 I will always reply.</p>
 
 
-            <p>You can call me on <a href="tel:+64 27 4583 948">+64 27 4583 948</a> or <a href="tel:+64 9 3784 087">+64 9 3784 087</a>. Alternativly, complete the form for email enquires. Thank you.</p>
+            <p>You can call me on <a href="tel:+64 27 4583 948">+64 27 4583 948</a> or <a href="tel:+64 9 3784 087">+64 9 3784 087</a>. Alternatively, complete the form for email enquires. Thank you.</p>
             <div className={contactStyles.contactFormInput}>
               <form
                 method="post"

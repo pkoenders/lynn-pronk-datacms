@@ -25,10 +25,12 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             >
               <div>
                 <img
+                  //fixed={previous.coverImage.fixed}
                   alt={previous.coverImage.alt}
                   src={previous.coverImage.url + '?auto=format&w=80'}
-                  width='90px'
+                  width='80px'
                   height='auto'
+                  loading='lazy'
                 />
               </div>
               <span>Previous</span>
@@ -41,10 +43,12 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             >
               <div>
                 <img
+
                   alt={next.coverImage.alt}
                   src={next.coverImage.url + '?auto=format&w=80'}
                   width='90px'
                   height='auto'
+                  loading='lazy'
                 />
               </div>
               <span>Next</span>
