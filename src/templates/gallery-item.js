@@ -4,10 +4,15 @@ import blogStyles from '../pages/portfolio.module.scss'
 import Img from 'gatsby-image'
 import DimensionsIcon from '../img/svg/dimensions.inline.svg'
 
+
+
+
+
+
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
-  const { next, previous, nextImgSrc, previousImgSrc } = pageContext
 
+  const { next, previous, nextImgSrc, previousImgSrc } = pageContext
 
 
   console.log('previous.coverImage.fixed.src = ' + previousImgSrc)
@@ -25,12 +30,13 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             >
               <div>
                 <img
+
                   //fixed={previous.coverImage.fixed}
                   alt={previous.coverImage.alt}
                   src={previous.coverImage.url + '?auto=format&w=80'}
                   width='80px'
                   height='auto'
-                  loading='lazy'
+                  mediumZoom
                 />
               </div>
               <span>Previous</span>
@@ -43,12 +49,10 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             >
               <div>
                 <img
-
                   alt={next.coverImage.alt}
                   src={next.coverImage.url + '?auto=format&w=80'}
                   width='90px'
                   height='auto'
-                  loading='lazy'
                 />
               </div>
               <span>Next</span>
@@ -56,8 +60,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
           }
         </div>
 
-        <div className={blogStyles.portfolioPage + ' mediumZoomImage'}>
-          <Img className={blogStyles.coverImage}
+        <div className={blogStyles.portfolioPage}>
+          <Img className={blogStyles.coverImage + ' medium-zoom-image'}
             width='100%'
             fluid={data.datoCmsPortfolio.coverImage.fluid}
             alt={data.datoCmsPortfolio.coverImage.alt}

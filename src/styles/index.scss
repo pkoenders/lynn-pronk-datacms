@@ -64,6 +64,15 @@ body {
   }
 }
 
+.medium-zoom-overlay {
+  display: flex;
+
+}
+
+.medium-zoom-image {
+  position: relative;
+  display: flex;
+}
 .medium-zoom-image,
 .medium-zoom-image--opened {
   // height: 100vh !important;
@@ -71,7 +80,12 @@ body {
   // margin: 0 auto !important;
   z-index: 20001 !important;
 
+
+  
+
   @include respond-below(sm) {
+
+
     z-index: 1001 !important;
     img {
       margin-top: 50px !important;
@@ -83,7 +97,7 @@ body {
 }
 .medium-zoom-overlay {
   z-index: 20001 !important;
-  //position: absolute;
+  xposition: absolute;
   //left: 300px;
   //margin: 0 auto !important;
   background: #081727 !important; //background: #000000 !important;

@@ -149,6 +149,7 @@
     background-color: #ffffff;
     background-color: #f6f4f2;
     border-radius: 5px 5px 0 0;
+    position: relative;
 
     @include respond-below(sm) {
       padding: 30px 30px 1px;
@@ -161,6 +162,7 @@
     .coverImage,
     .coverImage:active,
     .coverImage:focus {
+
       img {
         max-width: 800px !important;
         outline-width: 0 !important;
