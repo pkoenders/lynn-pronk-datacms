@@ -1,9 +1,8 @@
 
 import mediumZoom from 'medium-zoom'
-export const onRouteUpdate = (_, pluginOptions) => {
-    mediumZoom('.medium-zoom-image img')
+export const onRouteUpdate = () => {
+    mediumZoom('.medium-zoom-image div img')
 
-    //mediumZoom('.medium-zoom-image img')
     // Load page
     document.addEventListener("DOMContentLoaded", ready())
 

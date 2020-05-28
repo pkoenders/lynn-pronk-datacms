@@ -108,11 +108,14 @@ function Gallery({ categoryFilter }) {
               ) {
                 return (
                   <li
+
                     className={blogStyles.post + " item"}
                     key={i}
                     data-sal="fade"
                     data-sal-duration="300"
+
                     data-sal-easing="ease">
+
                     <div
                       className={"item-content"}
                     >
@@ -121,6 +124,7 @@ function Gallery({ categoryFilter }) {
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
                         src={edge.node.coverImage.url}
+                        data-attribute='SRL'
                       ></Img>
 
                       <span className={"enlarge"}><IconEnlarge /></span>

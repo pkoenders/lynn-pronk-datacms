@@ -60,10 +60,15 @@
   position: relative;
   border-radius: 5px;
 //border: 1px solid $headerBgColor;
+img {
+ cursor: zoom-in;
+}
 
 
 
   span {
+    pointer-events: none;
+
     position: absolute;
     bottom: 60px;
     right: 10px;
@@ -162,9 +167,11 @@
     .coverImage,
     .coverImage:active,
     .coverImage:focus {
+      
 
       img {
-        max-width: 800px !important;
+        //pointer-events: none;
+        //max-width: 800px !important;
         outline-width: 0 !important;
       }
     }
