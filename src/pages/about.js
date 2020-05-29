@@ -1,13 +1,9 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import Helmet from "react-helmet"
-import Head from '../components/head'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import Header from "../components/header"
-import aboutStyles from './about.module.scss';
-
-
+import aboutStyles from './about.module.scss'
 
 
 export const fluidImage = graphql`
@@ -44,46 +40,35 @@ export const pageQuery = graphql`
             ...GatsbyDatoCmsFluid
           }
         }
+      seoSettings {
+        description
+        title
       }
     }
+  }
 `;
 
 
 
 const AboutPage = (props) => {
 
-
-
   return (
     <>
-      <Helmet
-        meta={[
-          {
-            rel: "preconnect",
-            href: "https://lynn-pronk-datocms.netlify.app/",
-          },
-          { name: "description", content: "Sample" },
-          { name: "keywords", content: "sample, something" },
-        ]}
-      >
+      <Helmet>
         <html lang="en" />
+        <title>{props.data.datoCmsAboutMe.seoSettings.title}</title>
+        <meta name="description" content={props.data.datoCmsAboutMe.seoSettings.description} />
         <link
           rel="preconnect"
           href="https://lynn-pronk-datocms.netlify.app/"
         ></link>
-
         <link
           rel="preconnect"
           href="https://www.datocms-assets.com/26318/"
         ></link>
       </Helmet>
-      <Head title="Home" />
 
-      <Header />
       <Layout>
-        <Head title="About me" />
-
-
         <div className={aboutStyles.aboutWrapper}>
           <h2>{props.data.datoCmsAboutMe.title}</h2>
           <div className={aboutStyles.aboutContent}>
@@ -100,7 +85,7 @@ const AboutPage = (props) => {
           </div>
         </div>
       </Layout >
-    </ >
+    </>
   )
 }
 

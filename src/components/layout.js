@@ -1,18 +1,22 @@
-import React from "react"
-import Footer from "./footer"
-import "../styles/index.scss"
-import layoutStyles from "./layout.module.scss"
+import React from 'react'
+import Header from './header'
+import Footer from './footer'
+import '../styles/index.scss'
+import layoutStyles from './layout.module.scss'
 
 const Layout = props => {
   return (
-    <div id="layoutModule" className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
-        <main>
-          {props.children}
-        </main>
+    <>
+      <Header />
+      <div id="layoutModule" className={layoutStyles.container}>
+        <div className={layoutStyles.content}>
+          <main>
+            {props.children}
+          </main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   )
 }
 

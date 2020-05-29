@@ -5,10 +5,6 @@ import Img from 'gatsby-image'
 import DimensionsIcon from '../img/svg/dimensions.inline.svg'
 
 
-
-
-
-
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
 
@@ -62,15 +58,12 @@ const PortfolioPageItem = ({ data, pageContext }) => {
 
         <div className={blogStyles.portfolioPage}>
 
-          <div className={'medium-zoom-image'}>
-            <Img className={blogStyles.coverImage}
-              width='100%'
-              fluid={data.datoCmsPortfolio.coverImage.fluid}
-              alt={data.datoCmsPortfolio.coverImage.alt}
-              src={data.datoCmsPortfolio.coverImage.url}
-
-            ></Img>
-          </div>
+          <Img className={blogStyles.coverImage + ' medium-zoom-image'}
+            width='100%'
+            fluid={data.datoCmsPortfolio.coverImage.fluid}
+            alt={data.datoCmsPortfolio.coverImage.alt}
+            src={data.datoCmsPortfolio.coverImage.url}
+          ></Img>
 
 
           <div className={blogStyles.itemSizing}>
