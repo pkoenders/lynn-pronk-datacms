@@ -58,14 +58,6 @@ const AboutPage = (props) => {
         <html lang="en" />
         <title>{props.data.datoCmsAboutMe.seoSettings.title}</title>
         <meta name="description" content={props.data.datoCmsAboutMe.seoSettings.description} />
-        <link
-          rel="preconnect"
-          href="https://lynn-pronk-datocms.netlify.app/"
-        ></link>
-        <link
-          rel="preconnect"
-          href="https://www.datocms-assets.com/26318/"
-        ></link>
       </Helmet>
 
       <Layout>

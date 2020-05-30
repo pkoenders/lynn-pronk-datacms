@@ -15,7 +15,7 @@ function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
           type="button"
           name="Child Portraits"
           id='child'
-          className={'buttonSecondary' + ' filterGalleryBtn'}
+          className='buttonSecondary filterGalleryBtn'
           onClick={clickFilter}
         >
           Child Portraits
@@ -26,7 +26,7 @@ function GalleryFilter({ categoryFilterTxt, updateFilterClick }) {
           type="button"
           name="Adult Portraits"
           id='adult'
-          className={'buttonSecondary' + ' filterGalleryBtn'}
+          className='buttonSecondary filterGalleryBtn'
           onClick={clickFilter}
         >
           Adult Portraits

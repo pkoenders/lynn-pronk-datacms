@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import aboutStyles from '../pages/about.module.scss'
 
 const Testimonial = () => {
-    let linkToItem
     const data = useStaticQuery(graphql`
     query {
       allDatoCmsTestimonial(sort: { fields: [position], order: ASC }) {
@@ -38,38 +37,33 @@ const Testimonial = () => {
     return (
         <>
             {data.allDatoCmsTestimonial.edges.map((edge, i) => {
-                linkToItem = edge.node.linkToGalleryItem
+                return (
+                    <>
+                        {edge.node.linkToGalleryItem
+                            ? <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}>
 
-                if (linkToItem === null) {
-                    return (
-                        <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}>
-                            {edge.node.addArtwork &&
-                                <div className={aboutStyles.testimonialImgWrapper}>
-                                    <Img
-                                        fluid={edge.node.addArtwork.fluid}
-                                        alt={edge.node.addArtwork.alt}
-                                        src={edge.node.addArtwork.url}
-                                    ></Img>
-                                </div>
-                            }
+                                <Link
+                                    to={`/gallery/${edge.node.linkToGalleryItem.slug}`}
+                                    title={edge.node.linkToGalleryItem.title}
+                                >
+                                    {edge.node.addArtwork &&
+                                        <div className={aboutStyles.testimonialImgWrapper}>
+                                            <Img
+                                                fluid={edge.node.addArtwork.fluid}
+                                                alt={edge.node.addArtwork.alt}
+                                                src={edge.node.addArtwork.url}
+                                            ></Img>
+                                        </div>
+                                    }
 
-                            <p className={aboutStyles.testimonialQuote}>
-                                {edge.node.testmonial}&nbsp;
-                            </p>
-                            <p><strong>{edge.node.name}</strong> - <span>{edge.node.dateOfTestmonial}</span></p>
-                        </div>
-                    )
-                }
+                                    <p className={aboutStyles.testimonialQuote}>
+                                        {edge.node.testmonial}&nbsp;
+                                    </p>
+                                    <p className={aboutStyles.link}><strong>{edge.node.name}</strong> - <span>{edge.node.dateOfTestmonial}</span></p>
+                                </Link>
 
-                if (linkToItem != null) {
-                    return (
-
-                        <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}>
-
-                            <Link
-                                to={`/gallery/${linkToItem.slug}`}
-                                title={linkToItem.title}
-                            >
+                            </div>
+                            : <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}>
                                 {edge.node.addArtwork &&
                                     <div className={aboutStyles.testimonialImgWrapper}>
                                         <Img
@@ -83,17 +77,14 @@ const Testimonial = () => {
                                 <p className={aboutStyles.testimonialQuote}>
                                     {edge.node.testmonial}&nbsp;
                                 </p>
-                                <p className={aboutStyles.link}><strong>{edge.node.name}</strong> - <span>{edge.node.dateOfTestmonial}</span></p>
-                            </Link>
-
-                        </div>
-                    )
-                }
-
+                                <p><strong>{edge.node.name}</strong> - <span>{edge.node.dateOfTestmonial}</span></p>
+                            </div>
+                        }
+                    </>
+                )
             })}
-        </ >
+        </>
     )
-
 }
 
 export default Testimonial

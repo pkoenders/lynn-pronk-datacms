@@ -11,14 +11,6 @@ const ContactPage = () => {
         <html lang="en" />
         <title>Contact success</title>
         <meta name="description" content="Contact page success. Thanks for completing the form." />
-        <link
-          rel="preconnect"
-          href="https://lynn-pronk-datocms.netlify.app/"
-        ></link>
-        <link
-          rel="preconnect"
-          href="https://www.datocms-assets.com/26318/"
-        ></link>
       </Helmet>
 
       <Layout>

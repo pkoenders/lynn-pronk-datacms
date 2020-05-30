@@ -8,10 +8,8 @@ import DimensionsIcon from '../img/svg/dimensions.inline.svg'
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
 
-  const { next, previous, nextImgSrc, previousImgSrc } = pageContext
+  const { next, previous } = pageContext
 
-
-  console.log('previous.coverImage.fixed.src = ' + previousImgSrc)
   return (
     <>
 

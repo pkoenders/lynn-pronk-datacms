@@ -10,14 +10,6 @@ const HomePage = props => {
         <html lang="en" />
         <title>My gallery</title>
         <meta name="description" content="This is the galley of Lynn Pronk, a portraiture artist living in Auckland, New Zealand and open to new commissions for portrait art." />
-        <link
-          rel="preconnect"
-          href="https://lynn-pronk-datocms.netlify.app/"
-        ></link>
-        <link
-          rel="preconnect"
-          href="https://www.datocms-assets.com/26318/"
-        ></link>
       </Helmet>
 
       <Layout>

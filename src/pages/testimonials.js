@@ -11,14 +11,6 @@ const TestimonialPage = () => {
         <html lang="en" />
         <title>Client testimonials</title>
         <meta name="description" content="A list of testimononials written by clients who have commissioned my work" />
-        <link
-          rel="preconnect"
-          href="https://lynn-pronk-datocms.netlify.app/"
-        ></link>
-        <link
-          rel="preconnect"
-          href="https://www.datocms-assets.com/26318/"
-        ></link>
       </Helmet>
 
       <Layout>
