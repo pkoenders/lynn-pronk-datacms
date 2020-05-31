@@ -70,7 +70,7 @@
       }
 
      .testimonialImgWrapper {
-       border-radius: 10px;
+       border-radius: 7.5px;
        overflow: hidden;
        width: 130px;
       display: block;
@@ -94,7 +94,7 @@
       }
       p.testimonialQuote::after {
         content:"\201D";
-        bottom:7px;
+        bottom:5px;
         //right:-25px;
        // white-space: nowrap;
        // display: inline;

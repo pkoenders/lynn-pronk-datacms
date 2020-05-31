@@ -168,8 +168,11 @@ img {
     .coverImage:active,
     .coverImage:focus {
       
+      
 
       img {
+        margin: 0px !important;
+        border-radius: 3px;
         //pointer-events: none;
         //max-width: 800px !important;
         outline-width: 0 !important;

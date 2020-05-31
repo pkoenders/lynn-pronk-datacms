@@ -3,7 +3,15 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import contactStyles from './contact.module.scss'
 
+
+
+// element.innerHTML = user + '@' + domain;
+
+
 const ContactPage = () => {
+
+  const user = 'lynnpronk.portraits'
+  const domain = 'gmail.com'
   return (
     <>
       <Helmet>
