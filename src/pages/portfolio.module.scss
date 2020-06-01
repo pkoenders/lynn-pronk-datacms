@@ -49,6 +49,10 @@
   @include respond-above(md) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+
+  @include respond-above(xl) {
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  }
 }
 
 .post {
