@@ -2,7 +2,7 @@
 import mediumZoom from 'medium-zoom'
 export const onRouteUpdate = () => {
     //mediumZoom('.medium-zoom-image div img')
-    mediumZoom('.medium-zoom-image picture img')
+    // mediumZoom('.medium-zoom-image picture img')
 
     // 'figure.zoom-effect'
 

@@ -3,11 +3,13 @@ import { Link } from 'gatsby'
 import blogStyles from '../pages/portfolio.module.scss'
 import Img from 'gatsby-image'
 import DimensionsIcon from '../img/svg/dimensions.inline.svg'
+//import mediumZoom from 'medium-zoom'
 
 
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
 
+  //mediumZoom('.medium-zoom-image picture img')
   const { next, previous } = pageContext
 
   return (
