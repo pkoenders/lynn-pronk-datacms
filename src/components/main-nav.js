@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 import { globalHistory } from '@reach/router'
-import "./main-nav-sticky.scss"
-import mainNavStyles from "./main-nav.module.scss"
+import './main-nav-sticky.scss'
+import mainNavStyles from './main-nav.module.scss'
 
 
 const MainNav = ({ location }) => {
