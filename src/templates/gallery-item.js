@@ -9,7 +9,7 @@ import mediumZoom from 'medium-zoom'
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
 
-  mediumZoom('.medium-zoom-image picture img')
+  mediumZoom('.medium-zoom-image div img')
   const { next, previous } = pageContext
 
   return (
