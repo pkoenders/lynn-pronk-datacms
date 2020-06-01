@@ -8,10 +8,10 @@ const PreconnectLinks = () => {
                     rel="preconnect"
                     href="https://lynn-pronk-datocms.netlify.app/"
                 ></link> */}
-                <link
+                {/* <link
                     rel="preconnect"
                     href="https://www.datocms-assets.com/"
-                ></link>
+                ></link> */}
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
