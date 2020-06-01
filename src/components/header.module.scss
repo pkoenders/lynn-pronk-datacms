@@ -60,15 +60,15 @@ header.headerOpen {
       border-radius: 50%;
       margin: 30px auto 0;
       overflow: hidden;
-      padding: 3px;
-      width: 100px;
-      height: 100px;
+      padding: 4px;
+      width: 82px;
+      height: 82px;
       z-index: 10;
       > div {
-        width: 94px;
-        height: 94px;
+        width: 75px;
+        height: 75px;
         top: 0;
-        border: 6px solid $headerBgColor;
+        border: 5px solid $headerBgColor;
         border-radius: 50%;
         z-index: -1;
       }
@@ -101,9 +101,9 @@ header.headerOpen {
     }
 
     svg {
-      width: 120px;
+      width: 100px;
       height: auto;
-      margin: 10px 0 45px;
+      margin: 10px 0 30px;
     }
 
     @include respond-below(sm) {
