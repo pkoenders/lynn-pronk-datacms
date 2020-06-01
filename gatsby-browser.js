@@ -15,7 +15,7 @@ export const onRouteUpdate = () => {
         window.addEventListener(e, () => {
             //initStickyHeader()
             resizeAllGridItems()
-            mediumZoom('.medium-zoom-image picture img')
+            ready()
             //mobileNav()
         })
     })
