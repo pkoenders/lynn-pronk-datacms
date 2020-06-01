@@ -101,6 +101,7 @@ function Gallery({ categoryFilter }) {
               //console.log(edge, i)
               const categoryItem = edge.node.category
 
+
               if (
                 categoryItem.some(el => categoryFilter.includes(el))
                 ||
@@ -108,12 +109,10 @@ function Gallery({ categoryFilter }) {
               ) {
                 return (
                   <li
-
                     className={blogStyles.post + " item"}
                     key={i}
                     data-sal="fade"
                     data-sal-duration="300"
-
                     data-sal-easing="ease">
 
                     <div
