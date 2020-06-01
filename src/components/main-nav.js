@@ -23,10 +23,10 @@ const MainNav = ({ location }) => {
           <Link
             className={link.includes("/gallery/") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
             activeClassName={mainNavStyles.activeNavItem}
+            //getProps={isPartiallyActive}
             to="/"
           >
             My gallery
-
           </Link>
         </li>
 
