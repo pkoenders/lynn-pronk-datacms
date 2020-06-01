@@ -14,7 +14,7 @@ const lightBoxOptions = {
     disablePanzoom: false,
     hideControlsAfter: false,
     slideAnimationType: 'slide',
-    slideSpringValues: [300, 200],
+    slideSpringValues: [250, 500],
     slideTransitionTimingFunction: 'easeIn',
   },
   buttons: {
