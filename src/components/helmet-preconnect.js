@@ -4,14 +4,14 @@ const PreconnectLinks = () => {
     return (
         <>
             <Helmet>
-                {/* <link
+                <link
                     rel="preconnect"
-                    href="https://lynn-pronk-datocms.netlify.app/"
-                ></link> */}
-                {/* <link
+                    href="https://lynn-pronk-datocms.netlify.app"
+                ></link>
+                <link
                     rel="preconnect"
-                    href="https://www.datocms-assets.com/"
-                ></link> */}
+                    href="https://www.datocms-assets.com"
+                ></link>
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
