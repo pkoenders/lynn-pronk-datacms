@@ -2,7 +2,7 @@
 import mediumZoom from 'medium-zoom'
 export const onRouteUpdate = () => {
     //mediumZoom('.medium-zoom-image div img')
-    mediumZoom('.medium-zoom-image div img')
+    mediumZoom('.medium-zoom-image picture img')
 
     // 'figure.zoom-effect'
 
@@ -29,7 +29,7 @@ export const onRouteUpdate = () => {
 function ready() {
     //alert('DOM is ready');
 
-    mediumZoom('.medium-zoom-image div img')
+    mediumZoom('.medium-zoom-image picture img')
     resizeAllGridItems()
     hoverGridItems()
     mobileNav()
