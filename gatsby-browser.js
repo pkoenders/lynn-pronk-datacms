@@ -28,7 +28,7 @@ export const onRouteUpdate = () => {
 function ready() {
     //alert('DOM is ready');
 
-
+    mediumZoom('.medium-zoom-image picture img')
     resizeAllGridItems()
     hoverGridItems()
     mobileNav()
