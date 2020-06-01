@@ -21,7 +21,7 @@ const MainNav = ({ location }) => {
       <ul className={mainNavStyles.navList}>
         <li>
           <Link
-            className={link.includes("/gallery/") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
+            className={link.includes("/gallery") ? mainNavStyles.navItem + ' ' + mainNavStyles.activeNavItem : mainNavStyles.navItem}
             activeClassName={mainNavStyles.activeNavItem}
             //getProps={isPartiallyActive}
             to="/"
