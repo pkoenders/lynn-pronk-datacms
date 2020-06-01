@@ -95,17 +95,15 @@ function Gallery({ categoryFilter }) {
     <>
       <SimpleReactLightbox>
         <SRLWrapper options={lightBoxOptions}>
-
-
-          {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
           <ol id="myBlogList" className={blogStyles.posts + " grid"}>
+
+            {/* <GalleryFilter updateFilterClick={updateFilter} /> */}
+
             {data.allDatoCmsPortfolio.edges.map((edge, i) => {
               //console.log(edge, i)
               const categoryItem = edge.node.category
 
-
               //const SLBcustomCaption = `<a href="/gallery/${edge.node.slug} class="SRLCustomCaption myCustomButton">'${edge.node.title}'</a>`
-
 
               if (
                 categoryItem.some(el => categoryFilter.includes(el))
@@ -149,7 +147,6 @@ function Gallery({ categoryFilter }) {
                 )
               }
             })}
-
           </ol>
         </SRLWrapper>
       </SimpleReactLightbox>
