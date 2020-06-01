@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import PortfolioPageItem from './gallery-item'
+import mediumZoom from 'medium-zoom'
 
 export const query = graphql`
   query($slug: String!) {
@@ -39,6 +40,7 @@ export const query = graphql`
 `
 
 const PortfolioPage = ({ data, pageContext }) => {
+  mediumZoom('.medium-zoom-image picture img')
   return (
     <>
       <Helmet>
