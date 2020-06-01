@@ -2,7 +2,7 @@
 import mediumZoom from 'medium-zoom'
 export const onRouteUpdate = () => {
     //mediumZoom('.medium-zoom-image div img')
-    // mediumZoom('.medium-zoom-image picture img')
+    mediumZoom('.medium-zoom-image picture img')
 
     // 'figure.zoom-effect'
 
@@ -11,10 +11,11 @@ export const onRouteUpdate = () => {
 
     // Scroll etc
     //"scroll touchmove resize".split(" ").forEach(function (e) {
-    "resize".split(" ").forEach(function (e) {
+    "resize reload".split(" ").forEach(function (e) {
         window.addEventListener(e, () => {
             //initStickyHeader()
             resizeAllGridItems()
+            mediumZoom('.medium-zoom-image picture img')
             //mobileNav()
         })
     })
