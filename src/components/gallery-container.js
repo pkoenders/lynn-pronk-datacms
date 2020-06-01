@@ -3,17 +3,10 @@ import Gallery from "./gallery"
 import GalleryFilter from "./gallery-filter"
 import sal from 'sal.js'
 
-
-
-
 //const GalleryContainer = (props) => {
 let categoryFilter = "homepage"
 let categoryFilterTxt = "all"
 let layoutFilteredGallery
-
-
-
-
 
 // Resize grid
 const resizeGridItem = item => {
