@@ -3,9 +3,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import PortfolioPageItem from './gallery-item'
-import mediumZoom from 'medium-zoom'
 
-mediumZoom('.medium-zoom-image picture img')
 export const query = graphql`
   query($slug: String!) {
     datoCmsPortfolio(slug: { eq: $slug }) {
