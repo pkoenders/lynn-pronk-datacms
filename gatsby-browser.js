@@ -29,13 +29,26 @@ export const onRouteUpdate = () => {
 function ready() {
     //alert('DOM is ready');
 
-    mediumZoom('.medium-zoom-image picture img')
+    // mediumZoomImg()
     resizeAllGridItems()
     hoverGridItems()
     mobileNav()
     filterGalleryBtns()
 }
 
+
+function mediumZoomImg() {
+    mediumZoom('.medium-zoom-image picture img')
+
+    // const zoom = mediumZoom('.medium-zoom-image picture img')
+    // const button = document.querySelector(".zoom-trigger")
+    // button.addEventListener('click', () => zoom.open())
+
+    // const zoomImg = document.querySelector('[data-action="mediumZoom"]')
+    // //const zoom = mediumZoom('#image')
+
+    // zoomImg.addEventListener('click', () => mediumZoom.open())
+}
 function toggleMobileNavOnClick(hamBurgerBtn, headerDiv, layoutModule) {
     hamBurgerBtn.addEventListener("click", function () {
         headerDiv.scrollTop = 0

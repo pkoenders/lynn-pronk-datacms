@@ -10,8 +10,6 @@ import contactStyles from './contact.module.scss'
 
 const ContactPage = () => {
 
-  const user = 'lynnpronk.portraits'
-  const domain = 'gmail.com'
   return (
     <>
       <Helmet>

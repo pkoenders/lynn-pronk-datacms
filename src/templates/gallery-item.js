@@ -3,11 +3,24 @@ import { Link } from 'gatsby'
 import blogStyles from '../pages/portfolio.module.scss'
 import Img from 'gatsby-image'
 import DimensionsIcon from '../img/svg/dimensions.inline.svg'
+import EnlargeIcon from '../img/svg/icon-enlarge-alt.inline.svg'
+import mediumZoom from 'medium-zoom'
 
 
 
 const PortfolioPageItem = ({ data, pageContext }) => {
   //console.log(pageContext)
+
+  //mediumZoom('.medium-zoom-image picture img')
+
+  //const myTrigger = document.querySelector('.zoom-trigger')
+  // myTrigger.addEventListener('click', () => zoom.open())
+  function handleClickZoom(e) {
+    e.preventDefault();
+    const ZoomImg = mediumZoom('.medium-zoom-image picture img')
+    ZoomImg.open()
+  }
+
 
   const { next, previous } = pageContext
 
@@ -31,7 +44,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                   src={previous.coverImage.url + '?auto=format&w=80'}
                   width='80px'
                   height='auto'
-                  data-attribute='mediumZoom'
+
                 />
               </div>
               <span>Previous</span>
@@ -56,12 +69,13 @@ const PortfolioPageItem = ({ data, pageContext }) => {
         </div>
 
         <div className={blogStyles.portfolioPage}>
-
+          <EnlargeIcon className={blogStyles.zoomCoverImage} onClick={handleClickZoom} title="Click to zoom in main image" alt="Icon - Click to zoom in main image" />
           <Img className={blogStyles.coverImage + ' medium-zoom-image'}
             width='100%'
             fluid={data.datoCmsPortfolio.coverImage.fluid}
             alt={data.datoCmsPortfolio.coverImage.alt}
             src={data.datoCmsPortfolio.coverImage.url}
+          //data-attribute='mediumZoom'
           ></Img>
 
 

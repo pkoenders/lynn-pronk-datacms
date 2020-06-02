@@ -160,6 +160,7 @@ img {
     border-radius: 10px 10px 0 0;
     position: relative;
 
+
     @include respond-below(sm) {
       padding: 30px 30px 1px;
     }
@@ -168,12 +169,24 @@ img {
       padding: 15px 15px 1px;
     }
 
+    .zoomCoverImage{
+      display: block;
+    width: 42px;
+    margin:-45px auto 15px;
+    cursor: zoom-in;
+
+    @include respond-below(sm) {
+      margin:-15px auto 15px;
+    }
+    @include respond-below(xs) {
+      margin:0 auto 15px;
+    }
+
+    }
+
     .coverImage,
     .coverImage:active,
     .coverImage:focus {
-      
-      
-
       img {
         margin: 0px !important;
         border-radius: 3px;
@@ -254,6 +267,9 @@ img {
     margin: 0;
     height: auto;
     background-color: #dedddb;
+
+
+   
 
     p {
       margin-bottom: 0.3rem;

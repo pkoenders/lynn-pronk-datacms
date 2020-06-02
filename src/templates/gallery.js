@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import PortfolioPageItem from './gallery-item'
 
+
+
+
 export const query = graphql`
   query($slug: String!) {
     datoCmsPortfolio(slug: { eq: $slug }) {
@@ -38,7 +41,13 @@ export const query = graphql`
   } 
 `
 
-const PortfolioPage = ({ data, pageContext }) => {
+const PortfolioPage = ({ data, pageContext, myTrigger }) => {
+
+
+  // const zoom = mediumZoom('.medium-zoom-image picture img')
+  // const myTrigger = document.querySelector(".zoom-trigger")
+  // myTrigger.addEventListener('click', () => zoom.open())
+
 
   return (
     <>
