@@ -39,10 +39,33 @@
         }
 
         span {
-          display: block;
-          color: #848484;
+          display: inline-block;
           margin-bottom: 0.375rem;
           position: relative;
+        }
+
+        em {
+          position: relative;
+          display: block;
+          font-size: .9rem;
+          color: $primaryColor;
+          //font-style: normal;
+          font-weight: 500;
+          margin: 5px 0 0 35px;
+        }
+
+        em:before {
+          content: " ! ";
+          position: absolute;
+          font-weight: 700;
+          font-style: normal;
+          line-height: 1.3rem;
+          color: #ffffff;
+          background-color: $primaryColor;
+          //box-shadow: $globalBoxShadowB;
+          border-radius: 50%;
+          padding: 1px 10px 0 10px;
+          margin: 0 0 0 -33px;
         }
 
         [type="text"],
