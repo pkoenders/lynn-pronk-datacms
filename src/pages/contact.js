@@ -44,7 +44,7 @@ const ContactForm = () => {
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <input type="hidden" name="bot-field" />
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="lynn-pronk-contact" />
                 <p>
                   <label htmlFor="name">
                     <span>Name (required)</span>
