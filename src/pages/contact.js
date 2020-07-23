@@ -38,7 +38,7 @@ const ContactForm = () => {
               <form
                 name="lynn-pronk-contact"
                 onSubmit={handleSubmit(onSubmit)}
-                method="post"
+                method="POST"
                 //action="contact-success"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
