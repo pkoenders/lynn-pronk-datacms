@@ -1,5 +1,18 @@
 
 import mediumZoom from 'medium-zoom'
+
+export const onServiceWorkerUpdateReady = () => {
+    const answer = window.confirm(
+        `This application has been updated. ` +
+        `Reload to display the latest version?`
+    )
+
+    if (answer === true) {
+        window.location.reload()
+    }
+}
+
+
 export const onRouteUpdate = () => {
     //mediumZoom('.medium-zoom-image div img')
     mediumZoom('.medium-zoom-image picture img')
