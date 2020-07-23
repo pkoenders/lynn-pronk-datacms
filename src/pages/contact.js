@@ -45,6 +45,7 @@ const ContactForm = () => {
                       name="name"
                       placeholder="Your name"
                       id="name"
+                      required
                     />
                   </label>
                 </p>
@@ -56,6 +57,8 @@ const ContactForm = () => {
                       name="email"
                       placeholder="Your email address"
                       id="email"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      required
                     />
                   </label>
                 </p>
