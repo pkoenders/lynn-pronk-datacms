@@ -2,18 +2,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import contactStyles from './contact.module.scss'
-import { useForm } from 'react-hook-form';
-import { ErrorMessage } from '@hookform/error-message';
+
 
 
 const ContactForm = () => {
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => {
-    fetch(`./contact-success`)
-      .then(resp => {
-        window.location = "./contact-success";
-      });
-  }
 
 
   return (
@@ -37,11 +29,11 @@ const ContactForm = () => {
             <div className={contactStyles.contactFormInput}>
               <form
                 name="lynn-pronk-contact"
-                method="POST"
-                //action="contact-success"
+                method="post"
+                action="contact-success"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
-                onSubmit={handleSubmit(onSubmit)}
+
               >
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="lynn-pronk-contact" />
@@ -53,12 +45,7 @@ const ContactForm = () => {
                       name="name"
                       placeholder="Your name"
                       id="name"
-                      ref={register({
-                        required: "Please enter your name",
-                        maxLength: 80,
-                        message: "Please enter your name"
-                      })} />
-                    <ErrorMessage errors={errors} name="name" as="em" />
+                    />
                   </label>
                 </p>
                 <p>
@@ -69,14 +56,7 @@ const ContactForm = () => {
                       name="email"
                       placeholder="Your email address"
                       id="email"
-                      ref={register({
-                        required: "Please enter your email",
-                        pattern: {
-                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                          message: "Invalid email address address"
-                        }
-                      })} />
-                    <ErrorMessage errors={errors} name="email" as="em" />
+                    />
                   </label>
                 </p>
                 <p>
