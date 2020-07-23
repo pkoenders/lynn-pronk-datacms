@@ -37,11 +37,11 @@ const ContactForm = () => {
             <div className={contactStyles.contactFormInput}>
               <form
                 name="lynn-pronk-contact"
-                onSubmit={handleSubmit(onSubmit)}
                 method="POST"
                 //action="contact-success"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
+                onSubmit={handleSubmit(onSubmit)}
               >
                 <input type="hidden" name="bot-field" />
                 <p>
