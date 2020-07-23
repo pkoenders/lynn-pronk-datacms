@@ -40,7 +40,11 @@ const Testimonial = () => {
                 return (
                     <>
                         {edge.node.linkToGalleryItem
-                            ? <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}>
+                            ? <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}
+                                key={i}
+                                data-sal="fade"
+                                data-sal-duration="300"
+                                data-sal-easing="ease">
 
                                 <Link
                                     to={`/gallery/${edge.node.linkToGalleryItem.slug}`}
@@ -63,7 +67,12 @@ const Testimonial = () => {
                                 </Link>
 
                             </div>
-                            : <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}>
+                            : <div className={aboutStyles.testimonial} style={{ color: edge.node.chooseColour.hex }}
+                                key={i}
+                                data-sal="fade"
+                                data-sal-duration="300"
+                                data-sal-easing="ease">
+
                                 {edge.node.addArtwork &&
                                     <div className={aboutStyles.testimonialImgWrapper}>
                                         <Img
