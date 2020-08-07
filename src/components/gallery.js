@@ -6,9 +6,9 @@ import IconEnlarge from '../img/svg/icon-enlarge.inline.svg'
 import IconArrowRight from '../img/svg/icon-arrow-right.inline.svg'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import { SRLWrapper } from 'simple-react-lightbox'
-import 'lazysizes';
+import 'lazysizes'
 // import a plugin
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 
 const lightBoxOptions = {
