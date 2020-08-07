@@ -75,7 +75,7 @@ function Gallery({ categoryFilter }) {
             coverImage {
               url
               alt
-              fluid(maxWidth: 680, imgixParams: { fm: "webp", q: 50 }) {
+              fluid(maxWidth: 414, imgixParams: { fm: "webp", q: 50 }) {
                 ...GatsbyDatoCmsFluid
               }
             }
