@@ -79,12 +79,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Lynn Pronk Portfolio`,
+        name: `Gallery | Lynn Pronk`,
         short_name: `Lynn Pronk`,
         start_url: `/`,
         background_color: `#2B2B2B`,
         theme_color: `#2B2B2B`,
         icon: `src/img/favicon.png`,
+        icon_options: {
+          purpose: `maskable`,
+        },
         display: `standalone`,
       },
     },
