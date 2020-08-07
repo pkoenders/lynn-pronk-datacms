@@ -1,20 +1,32 @@
 @import "../styles/scss";
 
 .footer {
-  border-top:1px solid $headerBgColor;
+  border-top: 1px solid $headerBgColor;
   color: #f6f4f2;
   padding: 45px 60px 20px 60px;
   background-color: #253240;
   color: #788fa8;
   text-align: center;
+
   p {
-  font-size: .9rem;
-  color: #f6f4f2;
-  margin-bottom: 10px;
-}
-p + p {
-  font-size: .8rem;
-  color: #bfdeff;
-  line-height: 1.0rem;
-}
+    font-size: 1rem;
+    color: #f6f4f2;
+    margin-bottom: 10px;
+  }
+
+  p+p {
+    font-size: .8rem;
+    color: #bfdeff;
+    line-height: 1.0rem;
+
+    a,
+    a:hover {
+
+      color: #f6f4f2;
+      letter-spacing: .01rem;
+      text-decoration: underline;
+    }
+
+
+  }
 }

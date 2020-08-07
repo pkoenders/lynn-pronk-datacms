@@ -17,8 +17,8 @@ const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
       <p>© {new Date().getFullYear()} - Lynn Pronk Portraits</p>
-      <p>Designed &amp; Built by {data.site.siteMetadata.author}<br />Graphic, UI &amp; Web Designer</p>
-    </footer>
+      <p><a href="https://pkoenders.netlify.app/" title="Link to {data.site.siteMetadata.author}">Designed &amp; Built by {data.site.siteMetadata.author}<br />Graphic, UI &amp; Web Designer</a></p>
+    </footer >
   )
 }
 
