@@ -239,8 +239,9 @@
 
 
         img {
+          display: block;
           width: max-content !important;
-          height: 100% !important;
+          height: auto !important;
         }
       }
 
