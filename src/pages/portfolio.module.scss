@@ -72,6 +72,9 @@
   //border: 1px solid $headerBgColor;
   img {
     cursor: zoom-in;
+    width: max-content !important;
+    height: 100% !important;
+
   }
 
 
@@ -200,6 +203,8 @@
         //pointer-events: none;
         //max-width: 800px !important;
         outline-width: 0 !important;
+        width: max-content !important;
+        height: auto !important;
       }
     }
   }
@@ -233,7 +238,10 @@
         position: relative;
 
 
-        img {}
+        img {
+          width: max-content !important;
+          height: 100% !important;
+        }
       }
 
       span {
