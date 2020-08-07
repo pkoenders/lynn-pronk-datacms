@@ -76,7 +76,9 @@ const updateFilter = (filterName) => {
         <Gallery categoryFilter={categoryFilter} />
       </>
     )
-  } else if (categoryFilter = categoryFilter.replace(filterName + ',', '')) {
+    // } else if (categoryFilter = categoryFilter.replace(filterName + ',', '')) {
+  } else {
+    categoryFilter = categoryFilter.replace(filterName + ',', '')
     layoutFilteredGallery = (
       <>
         <Gallery categoryFilter={categoryFilter} />

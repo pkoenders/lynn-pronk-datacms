@@ -17,16 +17,16 @@ const Header = (props) => {
 
       file(relativePath: { eq: "img/lynn-avatar.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 200, maxHeight: 200, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 200, maxHeight: 200, quality: 50) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
 
       mikkisPDF: file(relativePath: { eq: "img/mikkis-magic-day.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 150, maxHeight: 100, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 150, maxHeight: 100, quality: 50) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

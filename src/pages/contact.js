@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import contactStyles from './contact.module.scss'
@@ -6,13 +7,21 @@ import contactStyles from './contact.module.scss'
 
 
 const ContactForm = () => {
-
+  const data = useStaticQuery(graphql`
+    query ContactData {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
 
   return (
     <>
       <Helmet>
         <html lang="en" />
-        <title>Contact me</title>
+        <title>Contact me | {data.site.siteMetadata.title}</title>
         <meta name="description" content="Contact page. I would love to be contacted to discuss work commissions or just hear your thoughts and ideas. I will always reply. Please complete the form." />
       </Helmet>
 

@@ -7,7 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Lynn Pronk - DatoCMS",
+    title: "Lynn Pronk Portraits",
+    description: `Gallery | Lynn Pronk Portraits`,
     author: "Peter Koenders",
     year: "2020",
   },

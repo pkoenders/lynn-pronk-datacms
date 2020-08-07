@@ -1,16 +1,26 @@
 import React from 'react';
+import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import contactStyles from './contact.module.scss'
 import LikeIcon from '../img/svg/like.inline.svg'
 
 const ContactPage = () => {
+  const data = useStaticQuery(graphql`
+    query ContactSuccessData {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <>
       <Helmet>
         <html lang="en" />
-        <title>Contact success</title>
-        <meta name="description" content="Contact page success. Thanks for completing the form." />
+        <title>Contact success | {data.site.siteMetadata.title}</title>
+        <meta name="description" content="Contact page success. Thanks for completing our contact form." />
       </Helmet>
 
       <Layout>

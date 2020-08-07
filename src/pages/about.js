@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import aboutStyles from './about.module.scss'
@@ -23,6 +23,12 @@ export const pageQuery = graphql`
     }
     image2: file(relativePath: { eq: "img/mikkis-magic-day.jpg" }) {
       ...fluidImage
+    }
+
+    site {
+      siteMetadata {
+        title
+      }
     }
 
     datoCmsAboutMe {
@@ -56,7 +62,7 @@ const AboutPage = (props) => {
     <>
       <Helmet>
         <html lang="en" />
-        <title>{props.data.datoCmsAboutMe.seoSettings.title}</title>
+        <title>{props.data.datoCmsAboutMe.seoSettings.title} | {props.data.site.siteMetadata.title}</title>
         <meta name="description" content={props.data.datoCmsAboutMe.seoSettings.description} />
       </Helmet>
 

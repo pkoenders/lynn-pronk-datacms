@@ -19,10 +19,7 @@ export const query = graphql`
         title
         alt
        
-        fluid(
-          maxWidth: 680
-          imgixParams: { fm: "jpg", auto: "compress" }
-        ) {
+        fluid(maxWidth: 680, imgixParams: { fm: "webp", q: 75 }) {
           ...GatsbyDatoCmsFluid
         }
         

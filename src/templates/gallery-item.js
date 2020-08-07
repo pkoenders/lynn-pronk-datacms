@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import blogStyles from '../pages/portfolio.module.scss'
 import Img from 'gatsby-image'
 import DimensionsIcon from '../img/svg/dimensions.inline.svg'
@@ -9,6 +10,17 @@ import mediumZoom from 'medium-zoom'
 
 
 const PortfolioPageItem = ({ data, pageContext }) => {
+
+  const Metadata = useStaticQuery(graphql`
+  query projectsData {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`)
+
   //console.log(pageContext)
 
   //mediumZoom('.medium-zoom-image picture img')
@@ -27,7 +39,11 @@ const PortfolioPageItem = ({ data, pageContext }) => {
   return (
     <>
 
-
+      <Helmet data={data}>
+        <html lang="en" />
+        <title>{data.datoCmsPortfolio.title} - Gallery | {Metadata.site.siteMetadata.title}</title>
+        <meta name="description" content={data.datoCmsPortfolio.description} />
+      </Helmet>
       <div className={blogStyles.portfolioPageWrapper}>
         <h2>{data.datoCmsPortfolio.title}</h2>
 
@@ -41,7 +57,8 @@ const PortfolioPageItem = ({ data, pageContext }) => {
 
                   //fixed={previous.coverImage.fixed}
                   alt={previous.coverImage.alt}
-                  src={previous.coverImage.url + '?auto=format&w=80'}
+                  //src={previous.coverImage.url + '?auto=format&w=80'}
+                  src={previous.coverImage.url}
                   width='80px'
                   height='auto'
 
@@ -58,7 +75,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
               <div>
                 <img
                   alt={next.coverImage.alt}
-                  src={next.coverImage.url + '?auto=format&w=80'}
+                  src={next.coverImage.url}
                   width='90px'
                   height='auto'
                 />

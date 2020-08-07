@@ -44,9 +44,10 @@ function Gallery({ categoryFilter }) {
           next {
             slug
             title
+            
             coverImage {
-              fixed(width: 90, imgixParams: { fm: "jpg", auto: "compress" }) {
-                ...GatsbyDatoCmsFixed
+              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 60 }) {
+                ...GatsbyDatoCmsFluid
               }
               url
               alt                
@@ -58,8 +59,8 @@ function Gallery({ categoryFilter }) {
             slug
             title
             coverImage {
-              fixed(width: 90, imgixParams: { fm: "jpg", auto: "compress" }) {
-                ...GatsbyDatoCmsFixed
+              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 60 }) {
+                ...GatsbyDatoCmsFluid
               }
               url
               alt                
@@ -74,14 +75,11 @@ function Gallery({ categoryFilter }) {
             coverImage {
               url
               alt
-
-              fluid(
-                maxWidth: 388,
-                imgixParams: { fm: "jpg", auto: "compress" }
-              ) {
+              fluid(maxWidth: 680, imgixParams: { fm: "webp", q: 60 }) {
                 ...GatsbyDatoCmsFluid
               }
             }
+            
           }
         }
       }
@@ -145,6 +143,8 @@ function Gallery({ categoryFilter }) {
                   </li>
 
                 )
+              } else {
+                return false
               }
             })}
           </ol>
