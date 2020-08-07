@@ -46,7 +46,7 @@ function Gallery({ categoryFilter }) {
             title
             
             coverImage {
-              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 60 }) {
+              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 30 }) {
                 ...GatsbyDatoCmsFluid
               }
               url
@@ -59,7 +59,7 @@ function Gallery({ categoryFilter }) {
             slug
             title
             coverImage {
-              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 60 }) {
+              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 30 }) {
                 ...GatsbyDatoCmsFluid
               }
               url
@@ -75,7 +75,7 @@ function Gallery({ categoryFilter }) {
             coverImage {
               url
               alt
-              fluid(maxWidth: 680, imgixParams: { fm: "webp", q: 60 }) {
+              fluid(maxWidth: 680, imgixParams: { fm: "webp", q: 50 }) {
                 ...GatsbyDatoCmsFluid
               }
             }
@@ -120,10 +120,11 @@ function Gallery({ categoryFilter }) {
                       className={"item-content"}
                     >
                       <Img
-                        width='100%'
+                        //width='100%'
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
                         src={edge.node.coverImage.url}
+                        loading="lazy"
                         data-attribute='SRL'
                       ></Img>
 

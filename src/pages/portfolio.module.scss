@@ -13,6 +13,10 @@
     // margin: 0 15px 15px 0;
     margin: 0 7.5px;
     width: min-content;
+
+    @include respond-below(sm) {
+      font-size: .8rem;
+    }
   }
 
   p {
@@ -46,6 +50,7 @@
     padding: 15px;
     grid-gap: 15px;
   }
+
   @include respond-above(md) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
@@ -63,10 +68,11 @@
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-//border: 1px solid $headerBgColor;
-img {
- cursor: zoom-in;
-}
+
+  //border: 1px solid $headerBgColor;
+  img {
+    cursor: zoom-in;
+  }
 
 
 
@@ -108,7 +114,7 @@ img {
     align-items: center;
 
 
-    transition:$hoverTransition;
+    transition: $hoverTransition;
 
     svg {
       position: relative;
@@ -134,7 +140,7 @@ img {
 
 .post:hover {
   box-shadow: 0 0 13px 5px rgba(0, 0, 0, 0.173);
- // transform: scale(1.05) rotate(2deg);
+  // transform: scale(1.05) rotate(2deg);
   cursor: pointer;
 }
 
@@ -169,18 +175,19 @@ img {
       padding: 15px 15px 1px;
     }
 
-    .zoomCoverImage{
+    .zoomCoverImage {
       display: block;
-    width: 42px;
-    margin:-45px auto 15px;
-    cursor: zoom-in;
+      width: 42px;
+      margin: -45px auto 15px;
+      cursor: zoom-in;
 
-    @include respond-below(sm) {
-      margin:-15px auto 15px;
-    }
-    @include respond-below(xs) {
-      margin:0 auto 15px;
-    }
+      @include respond-below(sm) {
+        margin: -15px auto 15px;
+      }
+
+      @include respond-below(xs) {
+        margin: 0 auto 15px;
+      }
 
     }
 
@@ -269,7 +276,7 @@ img {
     background-color: #dedddb;
 
 
-   
+
 
     p {
       margin-bottom: 0.3rem;
@@ -279,7 +286,7 @@ img {
   .itemSizing {
     display: flex;
     width: fit-content;
-    margin: 30px auto 0 ;
+    margin: 30px auto 0;
 
     svg {
       width: 25px;
@@ -304,12 +311,14 @@ img {
       }
     }
   }
+
   p.year {
     display: inline-flex;
     font-size: 0.8rem;
+
     span {
       font-weight: bold;
-  
+
       align-items: center;
     }
   }
@@ -317,10 +326,10 @@ img {
   p.medium {
     text-align: center;
     font-size: 0.7rem;
-      line-height: 0.8rem;
-      text-transform: uppercase;
-      margin:7px 0 30px;
-      color: #5b6b7b;
+    line-height: 0.8rem;
+    text-transform: uppercase;
+    margin: 7px 0 30px;
+    color: #5b6b7b;
 
   }
 }

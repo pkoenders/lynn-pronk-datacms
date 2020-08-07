@@ -61,6 +61,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                   src={previous.coverImage.url}
                   width='80px'
                   height='auto'
+                  loading="eager"
 
                 />
               </div>
@@ -78,6 +79,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                   src={next.coverImage.url}
                   width='90px'
                   height='auto'
+                  loading="eager"
                 />
               </div>
               <span>Next</span>
