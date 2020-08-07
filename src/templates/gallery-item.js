@@ -52,19 +52,20 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             <Link
               to={`/gallery/${previous.slug}`} className={blogStyles.previous}
             >
-              <div>
-                <img
 
-                  //fixed={previous.coverImage.fixed}
-                  alt={previous.coverImage.alt}
-                  //src={previous.coverImage.url + '?auto=format&w=80'}
-                  src={previous.coverImage.url}
-                  width='80px'
-                  height='auto'
-                  loading="eager"
+              <Img
 
-                />
-              </div>
+                //fixed={previous.coverImage.fixed}
+                alt={previous.coverImage.alt}
+                //src={previous.coverImage.url + '?auto=format&w=80'}
+                //src={previous.coverImage.url}
+                fluid={previous.coverImage.fluid}
+                //width='0px'
+                //height='auto'
+                loading="lazy"
+
+              />
+
               <span>Previous</span>
             </Link>
           }
@@ -73,15 +74,16 @@ const PortfolioPageItem = ({ data, pageContext }) => {
             <Link
               to={`/gallery/${next.slug}`} className={blogStyles.next}
             >
-              <div>
-                <img
-                  alt={next.coverImage.alt}
-                  src={next.coverImage.url}
-                  width='90px'
-                  height='auto'
-                  loading="eager"
-                />
-              </div>
+
+              <Img
+                alt={next.coverImage.alt}
+                //src={next.coverImage.url}
+                fluid={next.coverImage.fluid}
+                //width='90px'
+                //height='auto'
+                loading="lazy"
+              />
+
               <span>Next</span>
             </Link>
           }
@@ -90,10 +92,10 @@ const PortfolioPageItem = ({ data, pageContext }) => {
         <div className={blogStyles.portfolioPage}>
           <EnlargeIcon className={blogStyles.zoomCoverImage} onClick={handleClickZoom} title="Click to zoom in main image" alt="Icon - Click to zoom in main image" />
           <Img className={blogStyles.coverImage + ' medium-zoom-image'}
-            width='100%'
+            //width='100%'
             fluid={data.datoCmsPortfolio.coverImage.fluid}
             alt={data.datoCmsPortfolio.coverImage.alt}
-            src={data.datoCmsPortfolio.coverImage.url}
+          //src={data.datoCmsPortfolio.coverImage.url}
           //data-attribute='mediumZoom'
           ></Img>
 

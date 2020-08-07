@@ -21,10 +21,7 @@ const Testimonial = () => {
           addArtwork {
             url
             alt
-            fluid(
-              maxWidth: 120
-              imgixParams: { fm: "jpg", auto: "compress" }
-            ) {
+            fluid(maxWidth: 128, imgixParams: { fm: "webp", q: 75 }) {
               ...GatsbyDatoCmsFluid
             }
           }
@@ -55,7 +52,6 @@ const Testimonial = () => {
                                             <Img
                                                 fluid={edge.node.addArtwork.fluid}
                                                 alt={edge.node.addArtwork.alt}
-                                                src={edge.node.addArtwork.url}
                                             ></Img>
                                         </div>
                                     }
