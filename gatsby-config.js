@@ -26,6 +26,7 @@ module.exports = {
     //   }
     // },
 
+    `gatsby-prismic-lazy-load`,
 
     {
       resolve: `gatsby-plugin-google-analytics`,

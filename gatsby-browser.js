@@ -1,6 +1,8 @@
 
 import mediumZoom from 'medium-zoom'
 
+import 'lazysizes'
+
 export const onServiceWorkerUpdateReady = () => {
     const answer = window.confirm(
         `This application has been updated. ` +
