@@ -58,7 +58,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 //fixed={previous.coverImage.fixed}
                 alt={previous.coverImage.alt}
                 //src={previous.coverImage.url + '?auto=format&w=80'}
-                //src={previous.coverImage.url}
+                src={previous.coverImage.url}
                 fluid={previous.coverImage.fluid}
                 //width='0px'
                 //height='auto'
@@ -77,7 +77,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
 
               <Img
                 alt={next.coverImage.alt}
-                //src={next.coverImage.url}
+                src={next.coverImage.url}
                 fluid={next.coverImage.fluid}
                 //width='90px'
                 //height='auto'

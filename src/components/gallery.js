@@ -123,7 +123,7 @@ function Gallery({ categoryFilter }) {
                         //width='100%'
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
-                        //src={edge.node.coverImage.url}
+                        src={edge.node.coverImage.url}
                         loading="lazy"
                         data-attribute='SRL'
                         data-src={edge.node.coverImage.url}

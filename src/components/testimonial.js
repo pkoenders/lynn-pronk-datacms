@@ -52,6 +52,7 @@ const Testimonial = () => {
                                             <Img
                                                 fluid={edge.node.addArtwork.fluid}
                                                 alt={edge.node.addArtwork.alt}
+                                                src={edge.node.addArtwork.url}
                                             ></Img>
                                         </div>
                                     }
