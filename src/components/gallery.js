@@ -127,7 +127,7 @@ function Gallery({ categoryFilter }) {
                         loading="lazy"
                         data-attribute='SRL'
                         data-src={edge.node.coverImage.url}
-                        className="lazyload"
+                        className={"lazyload"}
                       ></Img>
 
                       <span className={"enlarge"}><IconEnlarge /></span>
