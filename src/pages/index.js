@@ -20,8 +20,8 @@ const HomePage = props => {
     <>
       <Helmet>
         <html lang="en" />
-        <title>Welcome to my portrait gallery | {data.site.siteMetadata.title}</title>
-        <meta name="description" content="Welcom to the galley of Lynn Pronk Portraits. A portraiture artist living in Auckland, New Zealand and open to new commissions for portrait art." />
+        <title>Childrens and adult portrait Artist - Welcome to my portrait gallery | {data.site.siteMetadata.title}</title>
+        <meta name="description" content="Childrens and adult portrait Artist. Lynn Pronk, a portraiture artist living in Auckland, New Zealand and open to new commissions for portrait art." />
       </Helmet>
       <Layout>
         <GalleryContainer />
