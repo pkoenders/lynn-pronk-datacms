@@ -203,7 +203,8 @@
         //pointer-events: none;
         //max-width: 800px !important;
         outline-width: 0 !important;
-        width: max-content !important;
+        width: 100% !important;
+        max-width: 680px !important;
         height: auto !important;
       }
     }
@@ -240,8 +241,11 @@
 
         img {
           display: block;
-          width: max-content !important;
+          width: 100% !important;
+          max-width: 40px !important;
           height: auto !important;
+          height: 40px !important;
+          max-width: 40px !important;
         }
       }
 

@@ -21,7 +21,7 @@ const Testimonial = () => {
           addArtwork {
             url
             alt
-            fluid(maxWidth: 128, imgixParams: { fm: "webp", q: 75 }) {
+            fluid(maxWidth: 128, imgixParams: { fm: "jpg", q: 75 }) {
               ...GatsbyDatoCmsFluid
             }
           }

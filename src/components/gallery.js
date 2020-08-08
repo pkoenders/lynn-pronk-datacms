@@ -46,7 +46,7 @@ function Gallery({ categoryFilter }) {
             title
             
             coverImage {
-              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 30 }) {
+              fluid(maxWidth: 90, imgixParams: { fm: "jpg", q: 30 }) {
                 ...GatsbyDatoCmsFluid
               }
               url
@@ -59,7 +59,7 @@ function Gallery({ categoryFilter }) {
             slug
             title
             coverImage {
-              fluid(maxWidth: 90, imgixParams: { fm: "webp", q: 30 }) {
+              fluid(maxWidth: 90, imgixParams: { fm: "jpg", q: 30 }) {
                 ...GatsbyDatoCmsFluid
               }
               url
@@ -75,7 +75,7 @@ function Gallery({ categoryFilter }) {
             coverImage {
               url
               alt
-              fluid(maxWidth: 414, imgixParams: { fm: "webp", q: 50 }) {
+              fluid(maxWidth: 414, imgixParams: { fm: "jpg", q: 50 }) {
                 ...GatsbyDatoCmsFluid
               }
             }
@@ -123,7 +123,7 @@ function Gallery({ categoryFilter }) {
                         //width='100%'
                         fluid={edge.node.coverImage.fluid}
                         alt={edge.node.coverImage.alt}
-                        src={edge.node.coverImage.url}
+                        //src={edge.node.coverImage.url}
                         loading="lazy"
                         data-attribute='SRL'
                         data-src={edge.node.coverImage.url}
