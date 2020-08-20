@@ -59,7 +59,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 alt={previous.coverImage.alt}
                 //src={previous.coverImage.url + '?auto=format&w=80'}
                 //src={previous.coverImage.url}
-                fluid={previous.coverImage.fluid}
+                fixed={previous.coverImage.fixed}
                 //idth='40px'
                 //height='auto'
                 loading="lazy"
@@ -79,10 +79,10 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 alt={next.coverImage.alt}
                 //src={next.coverImage.url + '?auto=format&w=80'}
                 //src={next.coverImage.url}
-                fluid={next.coverImage.fluid}
+                fixed={next.coverImage.fixed}
                 //width='40px'
                 //height='auto'
-                loading="auto"
+                loading="eager"
               />
 
               <span>Next</span>

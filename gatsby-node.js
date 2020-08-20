@@ -14,8 +14,9 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 dateYear
                 coverImage {
-                  fluid(imgixParams: {fm: "withWebp", maxW: 40, q: 30}, maxWidth: 40) {
+                  fixed(width: 40, imgixParams: {fm: "withWebp", maxW: 40}) {
                     src
+                    width
                   }
                   url
                   alt
