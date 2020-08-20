@@ -53,14 +53,14 @@ const PortfolioPage = ({ data, pageContext, myTrigger }) => {
         <title>{data.datoCmsPortfolio.title}</title>
         <meta name="description" content={data.datoCmsPortfolio.seoSettings.description} />
         {/* <meta name="keywords" content={ data.datoCmsPortfolio.seoSettings.description } /> */}
-        <link
+        {/* <link
           rel="preconnect"
           href="https://lynn-pronk-datocms.netlify.app/"
         ></link>
         <link
           rel="preconnect"
           href="https://www.datocms-assets.com/26318/"
-        ></link>
+        ></link> */}
       </Helmet>
 
       <Layout >
