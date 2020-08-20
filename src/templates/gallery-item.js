@@ -79,7 +79,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 alt={next.coverImage.alt}
                 //src={next.coverImage.url + '?auto=format&w=80'}
                 //src={next.coverImage.url}
-                fixed={next.coverImage.fluid}
+                fixed={next.coverImage.fixed}
                 //width='40px'
                 //height='auto'
                 loading="auto"
