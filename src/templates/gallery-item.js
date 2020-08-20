@@ -60,7 +60,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 //src={previous.coverImage.url + '?auto=format&w=80'}
                 //src={previous.coverImage.url}
                 fluid={previous.coverImage.fluid}
-                width='40px'
+                //idth='40px'
                 //height='auto'
                 loading="lazy"
 
@@ -80,7 +80,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 //src={next.coverImage.url + '?auto=format&w=80'}
                 //src={next.coverImage.url}
                 fluid={next.coverImage.fluid}
-                width='40px'
+                //width='40px'
                 //height='auto'
                 loading="auto"
               />

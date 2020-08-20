@@ -14,7 +14,7 @@ exports.createPages = ({ graphql, actions }) => {
                 title
                 dateYear
                 coverImage {
-                  fluid(maxWidth: 680, imgixParams: { fm: "jpg", q: 75 }) {
+                  fluid(imgixParams: {fm: "withWebp", maxW: 40, q: 30}, maxWidth: 40) {
                     src
                   }
                   url
@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
               slug
               title
               coverImage {
-                fluid(maxWidth: 40, imgixParams: { fm: "jpg", q: 30 }) {
+                fluid(imgixParams: {fm: "withWebp", maxW: 40, q: 30}, maxWidth: 40) {
                   src
                 }
                 url
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
               slug
               title
               coverImage {
-                fluid(maxWidth: 40, imgixParams: { fm: "jpg", q: 30 }) {
+                fluid(imgixParams: {fm: "withWebp", maxW: 40, q: 30}, maxWidth: 40) {
                   src
                 }
                 url

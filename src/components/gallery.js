@@ -46,7 +46,7 @@ function Gallery({ categoryFilter }) {
             title
             
             coverImage {
-              fluid(maxWidth: 90, imgixParams: { fm: "jpg", q: 30 }) {
+              fluid(maxWidth: 90, imgixParams: { fm: "withWebp", q: 30 }) {
                 ...GatsbyDatoCmsFluid
               }
               url
@@ -59,7 +59,7 @@ function Gallery({ categoryFilter }) {
             slug
             title
             coverImage {
-              fluid(maxWidth: 90, imgixParams: { fm: "jpg", q: 30 }) {
+              fluid(maxWidth: 90, imgixParams: { fm: "withWebp", q: 30 }) {
                 ...GatsbyDatoCmsFluid
               }
               url
@@ -75,7 +75,7 @@ function Gallery({ categoryFilter }) {
             coverImage {
               url
               alt
-              fluid(maxWidth: 510, imgixParams: { fm: "jpg", q: 50 }) {
+              fluid(maxWidth: 510, imgixParams: { fm: "withWebp", q: 50 }) {
                 ...GatsbyDatoCmsFluid
               }
             }
