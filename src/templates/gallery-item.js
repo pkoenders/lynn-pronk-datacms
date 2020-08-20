@@ -62,7 +62,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 fixed={previous.coverImage.fixed}
                 //idth='40px'
                 //height='auto'
-                loading="auto"
+                loading="lazy"
 
               />
 
@@ -82,7 +82,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 fixed={next.coverImage.fixed}
                 //width='40px'
                 //height='auto'
-                loading="auto"
+                loading="lazy"
               />
 
               <span>Next</span>
