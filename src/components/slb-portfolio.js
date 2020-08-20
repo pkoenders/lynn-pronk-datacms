@@ -45,7 +45,7 @@ function SlbPortfolio() {
             {
               url
               alt
-              fluid(maxWidth: 360, imgixParams: { fm: "jpg", auto: "compress" }) {
+              fluid(maxWidth: 510, imgixParams: { fm: "jpg", auto: "compress" }) {
                 ...GatsbyDatoCmsFluid
             }
           }

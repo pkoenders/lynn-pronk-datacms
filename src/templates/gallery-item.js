@@ -82,7 +82,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 fluid={next.coverImage.fluid}
                 width='40px'
                 //height='auto'
-                loading="lazy"
+                loading="auto"
               />
 
               <span>Next</span>

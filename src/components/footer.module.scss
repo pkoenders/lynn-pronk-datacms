@@ -1,7 +1,7 @@
 @import "../styles/scss";
 
 .footer {
-  border-top: 1px solid $headerBgColor;
+  //    sborder-top: 1px solid $headerBgColor;
   color: #f6f4f2;
   padding: 45px 60px 20px 60px;
   background-color: #253240;
@@ -19,11 +19,13 @@
     color: #bfdeff;
     line-height: 1.0rem;
 
-    a,
-    a:hover {
-
+    a {
       color: #f6f4f2;
       letter-spacing: .01rem;
+
+    }
+
+    a:hover {
       text-decoration: underline;
     }
 
