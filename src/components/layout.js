@@ -1,5 +1,4 @@
 import React from 'react'
-//import PreConnect from '../components/helmet-preconnect'
 import Header from './header'
 import Footer from './footer'
 import '../styles/index.scss'
