@@ -62,7 +62,7 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 fixed={previous.coverImage.fixed}
                 //idth='40px'
                 //height='auto'
-                loading="eager"
+                loading="auto"
 
               />
 
@@ -79,10 +79,10 @@ const PortfolioPageItem = ({ data, pageContext }) => {
                 alt={next.coverImage.alt}
                 //src={next.coverImage.url + '?auto=format&w=80'}
                 //src={next.coverImage.url}
-                fixed={next.coverImage.fixed}
+                fixed={next.coverImage.fluid}
                 //width='40px'
                 //height='auto'
-                loading="eager"
+                loading="auto"
               />
 
               <span>Next</span>
